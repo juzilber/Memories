@@ -7,3 +7,19 @@
 //
 
 import UIKit
+
+class DAOFact: NSObject {
+    
+    func addFact(fact:Fact){
+        
+    }
+    
+    func editFact(fact:Fact){
+        
+    }
+    
+    func deleteFact(fact:Fact){
+        
+    }
+    
+}

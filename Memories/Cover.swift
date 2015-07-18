@@ -10,10 +10,10 @@ import UIKit
 
 class Cover: NSObject{
     
-    var photo : String = ""
-    var photo2 : String = ""
-    var name : String = ""
+    var imageProfile : String = ""
+    var imageBackground : String = ""
     var title : String = ""
+    var name : String = ""
 
 }
 
