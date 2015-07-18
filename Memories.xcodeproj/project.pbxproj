@@ -34,6 +34,8 @@
 		B94E91731B5AB88800114A63 /* RegisterFactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91711B5AB88800114A63 /* RegisterFactVC.xib */; };
 		B94E91761B5AB89C00114A63 /* RegisterFamilyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91741B5AB89C00114A63 /* RegisterFamilyVC.swift */; };
 		B94E91771B5AB89C00114A63 /* RegisterFamilyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */; };
+		B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */; };
+		B94E917F1B5AE92900114A63 /* ShowPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		B94E91711B5AB88800114A63 /* RegisterFactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFactVC.xib; sourceTree = "<group>"; };
 		B94E91741B5AB89C00114A63 /* RegisterFamilyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFamilyVC.swift; sourceTree = "<group>"; };
 		B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFamilyVC.xib; sourceTree = "<group>"; };
+		B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
+		B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPhotoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				B94E916D1B5AB86B00114A63 /* ShowFactFamilyVC.xib */,
 				B94E91711B5AB88800114A63 /* RegisterFactVC.xib */,
 				B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */,
+				B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				B94E916C1B5AB86B00114A63 /* ShowFactFamilyVC.swift */,
 				B94E91701B5AB88800114A63 /* RegisterFactVC.swift */,
 				B94E91741B5AB89C00114A63 /* RegisterFamilyVC.swift */,
+				B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */,
 				B94E91271B5AB19F00114A63 /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -285,6 +291,7 @@
 				B94E915F1B5AB7EB00114A63 /* CoverVC.xib in Resources */,
 				B94E91771B5AB89C00114A63 /* RegisterFamilyVC.xib in Resources */,
 				B94E916B1B5AB85000114A63 /* ShowFactVC.xib in Resources */,
+				B94E917F1B5AE92900114A63 /* ShowPhotoVC.xib in Resources */,
 				B94E91671B5AB82D00114A63 /* ShowSummaryVC.xib in Resources */,
 				B94E912F1B5AB19F00114A63 /* Images.xcassets in Resources */,
 				B94E91731B5AB88800114A63 /* RegisterFactVC.xib in Resources */,
@@ -311,6 +318,7 @@
 				B94E916A1B5AB85000114A63 /* ShowFactVC.swift in Sources */,
 				B94E91511B5AB71A00114A63 /* DAOFact.swift in Sources */,
 				B94E91281B5AB19F00114A63 /* AppDelegate.swift in Sources */,
+				B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */,
 				B94E916E1B5AB86B00114A63 /* ShowFactFamilyVC.swift in Sources */,
 				B94E91761B5AB89C00114A63 /* RegisterFamilyVC.swift in Sources */,
 				B94E91531B5AB73100114A63 /* DAOYearFact.swift in Sources */,
