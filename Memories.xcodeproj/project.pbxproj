@@ -517,6 +517,7 @@
 				B94E91431B5AB19F00114A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B94E91441B5AB19F00114A63 /* Build configuration list for PBXNativeTarget "MemoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				B94E91461B5AB19F00114A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
