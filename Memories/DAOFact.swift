@@ -12,6 +12,10 @@ class DAOFact: NSObject {
     
     func addFact(fact:Fact){
         
+    //adicionar foto
+    //adicionar audio
+    //adicionar legenda
+        
     }
     
     func editFact(fact:Fact){
