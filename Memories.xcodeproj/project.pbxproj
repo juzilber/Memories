@@ -36,6 +36,8 @@
 		B94E91771B5AB89C00114A63 /* RegisterFamilyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */; };
 		B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */; };
 		B94E917F1B5AE92900114A63 /* ShowPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */; };
+		B9B485EC1B5DED3500B00F3D /* CoverData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B485EB1B5DED3500B00F3D /* CoverData.plist */; };
+		B9B485EE1B5E1B0100B00F3D /* FactData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B485ED1B5E1B0100B00F3D /* FactData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFamilyVC.xib; sourceTree = "<group>"; };
 		B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPhotoVC.xib; sourceTree = "<group>"; };
+		B9B485EB1B5DED3500B00F3D /* CoverData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoverData.plist; sourceTree = "<group>"; };
+		B9B485ED1B5E1B0100B00F3D /* FactData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,9 @@
 		B94E91251B5AB19F00114A63 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9B485ED1B5E1B0100B00F3D /* FactData.plist */,
 				B94E91261B5AB19F00114A63 /* Info.plist */,
+				B9B485EB1B5DED3500B00F3D /* CoverData.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94E916F1B5AB86B00114A63 /* ShowFactFamilyVC.xib in Resources */,
+				B9B485EC1B5DED3500B00F3D /* CoverData.plist in Resources */,
 				B94E91321B5AB19F00114A63 /* LaunchScreen.xib in Resources */,
 				B94E91631B5AB81400114A63 /* RegisterCoverVC.xib in Resources */,
+				B9B485EE1B5E1B0100B00F3D /* FactData.plist in Resources */,
 				B94E915F1B5AB7EB00114A63 /* CoverVC.xib in Resources */,
 				B94E91771B5AB89C00114A63 /* RegisterFamilyVC.xib in Resources */,
 				B94E916B1B5AB85000114A63 /* ShowFactVC.xib in Resources */,
