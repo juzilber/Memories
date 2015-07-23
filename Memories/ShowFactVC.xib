@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowFactVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowFactVC" customModule="Memories" customModuleProvider="target">
             <connections>
+                <outlet property="editButton" destination="G7Q-b8-7SP" id="Tll-tM-ZtQ"/>
+                <outlet property="tableView" destination="Pca-J1-JGY" id="DiB-NB-ya9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,56 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-J1-JGY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-b8-7SP">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Pca-J1-JGY" secondAttribute="bottom" id="2k7-Nt-EMH"/>
+                <constraint firstItem="G7Q-b8-7SP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="4qC-9z-mW8"/>
+                <constraint firstItem="G7Q-b8-7SP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="Eia-8m-LHy"/>
+                <constraint firstItem="Pca-J1-JGY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="TvA-XQ-mBp"/>
+                <constraint firstAttribute="trailing" secondItem="Pca-J1-JGY" secondAttribute="trailing" id="eKP-7F-anl"/>
+                <constraint firstItem="Pca-J1-JGY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eZh-fK-pGJ"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Pca-J1-JGY"/>
+                    <exclude reference="G7Q-b8-7SP"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="4qC-9z-mW8"/>
+                    <exclude reference="Eia-8m-LHy"/>
+                    <exclude reference="2k7-Nt-EMH"/>
+                    <exclude reference="TvA-XQ-mBp"/>
+                    <exclude reference="eKP-7F-anl"/>
+                    <exclude reference="eZh-fK-pGJ"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Pca-J1-JGY"/>
+                    <include reference="G7Q-b8-7SP"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="4qC-9z-mW8"/>
+                    <include reference="Eia-8m-LHy"/>
+                    <include reference="2k7-Nt-EMH"/>
+                    <include reference="TvA-XQ-mBp"/>
+                    <include reference="eKP-7F-anl"/>
+                    <include reference="eZh-fK-pGJ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="301" y="210"/>
         </view>
     </objects>
 </document>

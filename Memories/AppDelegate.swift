@@ -19,9 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
-        window?.rootViewController = registerCoverVC
-        
+//        var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
+//        window?.rootViewController = registerCoverVC
+//        
+        //Testar showFact
+        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
+        window?.rootViewController = showFactVC
+
         window?.makeKeyAndVisible()
         
         return true
