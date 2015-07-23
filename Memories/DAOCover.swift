@@ -27,7 +27,7 @@ class DAOCover{
     private let coverPathDoc : String;
     
     //inicializa a classe
-    init(){
+    private init(){
         var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
         coverPathDoc = documentPath.stringByAppendingPathComponent("Cover")
         coverPath = documentPath.stringByAppendingPathComponent("Cover/CoverData.plist");
@@ -75,7 +75,7 @@ class DAOCover{
     
      //funcao pra salvar titulo, nome
     func saveData(cover : Cover, imageProfile: UIImage, imageBackground: UIImage?){
-        
+        //TODO: checar esse contents image. qual a relação dele com Title???
         contents["name"] = cover.name;
         contents["image"] = cover.title;
         saveDataImgToPath(imageProfile, name: "user.png");

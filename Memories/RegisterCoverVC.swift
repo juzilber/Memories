@@ -8,14 +8,15 @@
 
 import UIKit
 
-class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    //botao da imagem de capa
     @IBOutlet var buttonTeste2: UIButton!
     
-    //imageCover = imagem da capa
+    //vai pertimir acessar a camera para escolher imagem para a capa
     let imageCoverEdit = UIImagePickerController()
     
-    //imageView é a foto de perfil da pessoa
+    //imageView é a foto de perfil da pessoa. myImage permite acessar a camera.
     @IBOutlet var imageView: UIImageView!
     let myImage = UIImagePickerController()
     
@@ -32,16 +33,20 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
         imageCoverEdit.delegate = self
         
+        textFieldName.delegate = self
         
-        // create tap gesture recognizer
+        textFieldTitle.delegate = self
+        
+        
+        // cria um tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped:")
         
-        // add it to the image view;
+        // adiciona o gesture a imageView
         imageView.addGestureRecognizer(tapGesture)
         
         //buttonTeste.backgroundColor = UIColor.yellowColor()
         
-        // make image circle
+        // faz com que a imageView fique redonda
         imageView.userInteractionEnabled = true
         imageView.layer.borderWidth = 1
         imageView.layer.masksToBounds = false
@@ -49,6 +54,8 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.clipsToBounds = true
         
+        
+        //aqui acessamos a funcao getData da DAOCover e mando pra la a informacao preenchida no textField. pega a informação atualmente salva e mantém como placeholder enquanto o usuário não edita.
         let myCover = DAOCover.sharedInstance.getData();
             if(myCover != nil){
             textFieldTitle.text = myCover?.title;
@@ -58,6 +65,13 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    //funcao para que o textField feche quando aperta return
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    //funcao para escolher a imagem. IF apertar botao da imagem redonda, muda a imageView. ELSE muda a imagem do botao
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -95,11 +109,9 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }
         
-         
-        
     }
     
-    
+    //botao que salva as infos e leva direto pra DAOCover
     @IBAction func buttonSave(sender: AnyObject) {
         
         var cover: Cover = Cover()
@@ -109,9 +121,13 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
         DAOCover.sharedInstance.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
         
+        var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
     }
     
-    
+    //botao para acessar a troca de imagem de capa
     @IBAction func buttonTesteAcao(sender: AnyObject) {
         println("Image Tapped")
         
