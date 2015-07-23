@@ -9,13 +9,7 @@
 import Foundation
 import UIKit
 
-private let _daoCover = DAOCover()
-
 class DAOCover{
-    
-    class var sharedInstance: DAOCover {
-        return _daoCover
-    }
 
     
     //carregar plist de texto(titulo+nome)
@@ -27,14 +21,20 @@ class DAOCover{
     private let coverPathDoc : String;
     
     //inicializa a classe
-    private init(){
+    init(){
         var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
         coverPathDoc = documentPath.stringByAppendingPathComponent("Cover")
         coverPath = documentPath.stringByAppendingPathComponent("Cover/CoverData.plist");
         println(coverPath)
         let fileManager = NSFileManager.defaultManager();
+        
         if(fileManager.fileExistsAtPath(coverPathDoc)){
+            println("oi1")
             contents = NSMutableDictionary(contentsOfFile: coverPathDoc);
+            if( contents == nil ){
+                contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
+                contents.writeToFile(coverPath, atomically: true);
+            }
         }
         else
         {
@@ -45,6 +45,7 @@ class DAOCover{
     }
     
     private func createDict(){
+        println("entrou!!")
         contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
         contents.writeToFile(coverPath, atomically: true);
         
@@ -54,10 +55,10 @@ class DAOCover{
         
         //instanciando a classe Cover(passando informacoes da classe para a plist)
         var cover = Cover()
-        cover.name = contents["name"] as! String;
-        if(cover.name.isEmpty){
-            return nil;
+        if(contents == nil){
+            return nil
         }
+        cover.name = contents["name"] as! String;
         cover.title = contents["title"] as! String;
         cover.imageProfile = coverPathDoc + "/user.png";
         let path = coverPathDoc + "/image.png";
@@ -75,9 +76,9 @@ class DAOCover{
     
      //funcao pra salvar titulo, nome
     func saveData(cover : Cover, imageProfile: UIImage, imageBackground: UIImage?){
-        //TODO: checar esse contents image. qual a relação dele com Title???
+        
         contents["name"] = cover.name;
-        contents["image"] = cover.title;
+        contents["title"] = cover.title;
         saveDataImgToPath(imageProfile, name: "user.png");
         if(imageBackground != nil){
             saveDataImgToPath(imageBackground!, name: "image.png");

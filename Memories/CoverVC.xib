@@ -22,9 +22,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                     <color key="backgroundColor" red="1" green="0.6574872918121264" blue="0.92989811463341021" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="150" id="OX4-M5-maG"/>
                         <constraint firstAttribute="width" constant="600" id="XsY-eR-qir"/>
                         <constraint firstAttribute="height" constant="150" id="aqW-pj-3r3"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="aqW-pj-3r3"/>
+                        </mask>
+                    </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-kW-9kc">
                     <rect key="frame" x="235" y="67" width="150" height="150"/>

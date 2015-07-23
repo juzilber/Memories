@@ -19,11 +19,27 @@ class CoverVC: UIViewController {
         
         super.viewDidLoad()
 
-        let myCover = DAOCover.sharedInstance.getData();
+        var daoCover = DAOCover()
+        let myCover = daoCover.getData();
         if(myCover != nil){
+            println("\n\n\n\nAQUI\n\n\n\n")
+            println(myCover?.title)
             labelTitle.text = myCover?.title;
             labelName.text = myCover?.name;
-            imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile);}
+            imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile);
+        } else {
+            println("salvou nada")
+        }
+        
+        
+        imageProfile.userInteractionEnabled = true
+        imageProfile.layer.borderWidth = 1
+        imageProfile.layer.masksToBounds = false
+        imageProfile.layer.borderColor = UIColor.clearColor().CGColor
+        imageProfile.layer.cornerRadius = imageProfile.frame.height/2
+        imageProfile.clipsToBounds = true
+
+        
         
     }
 

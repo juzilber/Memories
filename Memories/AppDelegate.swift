@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = registerCoverVC
 //        
         //Testar showFact
-        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
-        window?.rootViewController = showFactVC
+        var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
+        window?.rootViewController = registerCoverVC
 
         window?.makeKeyAndVisible()
         

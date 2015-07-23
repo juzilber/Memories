@@ -55,13 +55,14 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.clipsToBounds = true
         
         
-        //aqui acessamos a funcao getData da DAOCover e mando pra la a informacao preenchida no textField. pega a informação atualmente salva e mantém como placeholder enquanto o usuário não edita.
-        let myCover = DAOCover.sharedInstance.getData();
-            if(myCover != nil){
-            textFieldTitle.text = myCover?.title;
-            textFieldName.text = myCover?.name;
-            imageView.image = UIImage(contentsOfFile: myCover!.imageProfile);
-        }
+        
+//        var daoCover = DAOCover()
+//        let myCover = daoCover.getData();
+//        if(myCover != nil){
+//            textFieldTitle.text = myCover?.title;
+//            textFieldName.text = myCover?.name;
+//            imageView.image = UIImage(contentsOfFile: myCover!.imageProfile);
+//        }
         
     }
     
@@ -119,7 +120,9 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         cover.title = textFieldTitle.text
         cover.name = textFieldName.text
         
-        DAOCover.sharedInstance.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
+        var daoCover = DAOCover()
+        
+        daoCover.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
         
         var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
         
