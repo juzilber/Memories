@@ -15,7 +15,6 @@
 		B94E914D1B5AB6F500114A63 /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914C1B5AB6F500114A63 /* DAOCover.swift */; };
 		B94E914F1B5AB70C00114A63 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914E1B5AB70C00114A63 /* Fact.swift */; };
 		B94E91511B5AB71A00114A63 /* DAOFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91501B5AB71A00114A63 /* DAOFact.swift */; };
-		B94E91531B5AB73100114A63 /* DAOYearFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91521B5AB73100114A63 /* DAOYearFact.swift */; };
 		B94E91551B5AB74900114A63 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91541B5AB74900114A63 /* Family.swift */; };
 		B94E91571B5AB75400114A63 /* DAOFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91561B5AB75400114A63 /* DAOFamily.swift */; };
 		B94E91591B5AB76200114A63 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91581B5AB76200114A63 /* Moment.swift */; };
@@ -63,7 +62,6 @@
 		B94E914C1B5AB6F500114A63 /* DAOCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCover.swift; sourceTree = "<group>"; };
 		B94E914E1B5AB70C00114A63 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		B94E91501B5AB71A00114A63 /* DAOFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFact.swift; sourceTree = "<group>"; };
-		B94E91521B5AB73100114A63 /* DAOYearFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOYearFact.swift; sourceTree = "<group>"; };
 		B94E91541B5AB74900114A63 /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		B94E91561B5AB75400114A63 /* DAOFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFamily.swift; sourceTree = "<group>"; };
 		B94E91581B5AB76200114A63 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				B94E91581B5AB76200114A63 /* Moment.swift */,
 				B94E914E1B5AB70C00114A63 /* Fact.swift */,
 				B94E91501B5AB71A00114A63 /* DAOFact.swift */,
-				B94E91521B5AB73100114A63 /* DAOYearFact.swift */,
 				B94E91541B5AB74900114A63 /* Family.swift */,
 				B94E91561B5AB75400114A63 /* DAOFamily.swift */,
 			);
@@ -329,7 +326,6 @@
 				B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */,
 				B94E916E1B5AB86B00114A63 /* ShowFactFamilyVC.swift in Sources */,
 				B94E91761B5AB89C00114A63 /* RegisterFamilyVC.swift in Sources */,
-				B94E91531B5AB73100114A63 /* DAOYearFact.swift in Sources */,
 				B94E91551B5AB74900114A63 /* Family.swift in Sources */,
 				B94E915B1B5AB78F00114A63 /* DataAlbumCache.swift in Sources */,
 				B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */,

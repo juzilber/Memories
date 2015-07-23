@@ -31,23 +31,25 @@ class DAOCover{
         var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
         coverPathDoc = documentPath.stringByAppendingPathComponent("Cover")
         coverPath = documentPath.stringByAppendingPathComponent("Cover/CoverData.plist");
-        
+        println(coverPath)
         let fileManager = NSFileManager.defaultManager();
-        if(!fileManager.fileExistsAtPath(coverPathDoc)){
+        if(fileManager.fileExistsAtPath(coverPathDoc)){
             contents = NSMutableDictionary(contentsOfFile: coverPathDoc);
         }
         else
         {
             fileManager.createDirectoryAtPath(coverPathDoc, withIntermediateDirectories: false, attributes: nil, error: nil)
+            createDict()
         }
         
     }
     
     private func createDict(){
-        contents = NSMutableDictionary(object: ["",""], forKey: ["name", "title"]);
+        contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
         contents.writeToFile(coverPath, atomically: true);
         
     }
+    //pegando as informacoes nome, titulo e imagens para salvar
     func getData() -> Cover?{
         
         //instanciando a classe Cover(passando informacoes da classe para a plist)
@@ -71,7 +73,7 @@ class DAOCover{
         
     }
     
-        //funcao pra salvar titulo, nome
+     //funcao pra salvar titulo, nome
     func saveData(cover : Cover, imageProfile: UIImage, imageBackground: UIImage?){
         
         contents["name"] = cover.name;

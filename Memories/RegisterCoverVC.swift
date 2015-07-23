@@ -49,6 +49,12 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.clipsToBounds = true
         
+        let myCover = DAOCover.sharedInstance.getData();
+            if(myCover != nil){
+            textFieldTitle.text = myCover?.title;
+            textFieldName.text = myCover?.name;
+            imageView.image = UIImage(contentsOfFile: myCover!.imageProfile);
+        }
         
     }
     
@@ -89,6 +95,7 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }
         
+         
         
     }
     

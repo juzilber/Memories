@@ -12,7 +12,7 @@ import AVFoundation
 class Moment : NSObject{
     
     var id:Int?
-    var photo:String = ""
+    var photo:[String] = [String]()
     var subtitle:String = ""
     var audio:String?
     var player:AVAudioPlayer?
