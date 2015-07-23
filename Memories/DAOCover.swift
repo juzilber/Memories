@@ -9,7 +9,14 @@
 import Foundation
 import UIKit
 
+private let _daoCover = DAOCover()
+
 class DAOCover{
+    
+    class var sharedInstance: DAOCover {
+        return _daoCover
+    }
+
     
     //carregar plist de texto(titulo+nome)
     //carregar fotos(perfil+background)

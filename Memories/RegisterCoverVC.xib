@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCoverVC" customModule="Memories" customModuleProvider="target">
             <connections>
-                <outlet property="loadImage" destination="MUt-Hf-iCs" id="6Rn-OD-WeW"/>
+                <outlet property="buttonTeste2" destination="Adi-tH-oMw" id="664-OK-Z1l"/>
+                <outlet property="imageView" destination="91F-9W-Jgo" id="HiY-Nh-jjx"/>
+                <outlet property="textFieldName" destination="NW1-wo-buS" id="mAd-dd-9ay"/>
+                <outlet property="textFieldTitle" destination="n6N-pE-blO" id="Phu-Dy-HIY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,20 +18,68 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUt-Hf-iCs">
-                    <rect key="frame" x="31" y="40" width="472" height="498"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWg-RC-rLa">
-                    <rect key="frame" x="114" y="295" width="46" height="30"/>
-                    <state key="normal" title="Button">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adi-tH-oMw">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                    <color key="backgroundColor" red="1" green="0.98968936824118603" blue="0.70608114874368577" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="buttonTappedLoadImage:" destination="-1" eventType="touchUpInside" id="Xop-lM-emB"/>
+                        <action selector="buttonTesteAcao:" destination="-1" eventType="touchUpInside" id="iup-UN-vA6"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6N-pE-blO" userLabel=" Text Field Titulo">
+                    <rect key="frame" x="212" y="285" width="150" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NW1-wo-buS" userLabel="Text Field Nome">
+                    <rect key="frame" x="212" y="489" width="150" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="feito por" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cps-dq-Edd">
+                    <rect key="frame" x="255" y="395" width="64" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-cK-JXn">
+                    <rect key="frame" x="30" y="35" width="61" height="30"/>
+                    <state key="normal" title="Cancelar">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV5-uq-uOh">
+                    <rect key="frame" x="527" y="35" width="43" height="30"/>
+                    <state key="normal" title="Salvar">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonSave:" destination="-1" eventType="touchUpInside" id="aMZ-4J-ceV"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EditPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="91F-9W-Jgo">
+                    <rect key="frame" x="212" y="59" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="cuU-2p-tNZ"/>
+                        <constraint firstAttribute="width" constant="150" id="fMB-jy-PWu"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="91F-9W-Jgo" secondAttribute="centerX" constant="13" id="FBm-wz-kwO"/>
+                <constraint firstAttribute="trailing" secondItem="mV5-uq-uOh" secondAttribute="trailing" constant="30" id="Z0V-c7-eDU"/>
+                <constraint firstItem="91F-9W-Jgo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="59" id="btb-zf-tGC"/>
+                <constraint firstItem="mV5-uq-uOh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="dhl-hP-2eI"/>
+                <constraint firstItem="UHN-cK-JXn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="lCH-J9-EZR"/>
+                <constraint firstItem="UHN-cK-JXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="tvd-Ss-8U4"/>
+            </constraints>
+            <point key="canvasLocation" x="200" y="270"/>
         </view>
     </objects>
+    <resources>
+        <image name="EditPhoto" width="1591" height="971"/>
+    </resources>
 </document>
