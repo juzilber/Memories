@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoverVC" customModule="Memories" customModuleProvider="target">
             <connections>
-                <outlet property="imageCover" destination="nYp-hY-8ac" id="oxl-Ov-eFR"/>
+                <outlet property="buttonImageCover" destination="ADG-GN-lSY" id="l8M-rb-XGy"/>
                 <outlet property="imageProfile" destination="AAf-kW-9kc" id="4Il-k6-Rnz"/>
                 <outlet property="labelName" destination="o12-2t-DQq" id="j2b-cu-4B5"/>
                 <outlet property="labelTitle" destination="ycQ-tE-4oj" id="29g-Ni-sFS"/>
@@ -18,21 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nYp-hY-8ac" userLabel="Image View Cover">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADG-GN-lSY">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
-                    <color key="backgroundColor" red="1" green="0.6574872918121264" blue="0.92989811463341021" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.72262226308963085" blue="0.87061523929932372" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="ECq-3v-c0B"/>
+                        <constraint firstAttribute="height" constant="150" id="1ck-Ll-9lK"/>
                     </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-kW-9kc">
-                    <rect key="frame" x="225" y="70" width="150" height="150"/>
-                    <color key="backgroundColor" red="0.53281089681136484" green="0.64666509422532026" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="4Fi-Um-E8p"/>
-                        <constraint firstAttribute="width" constant="150" id="gi6-fg-8Tl"/>
-                    </constraints>
-                </imageView>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiN-mg-YLY">
                     <rect key="frame" x="30" y="30" width="30" height="30"/>
                     <state key="normal" title="Edit">
@@ -72,6 +67,14 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-kW-9kc">
+                    <rect key="frame" x="225" y="70" width="150" height="150"/>
+                    <color key="backgroundColor" red="0.53281089681136484" green="0.64666509422532026" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="4Fi-Um-E8p"/>
+                        <constraint firstAttribute="width" constant="150" id="gi6-fg-8Tl"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -80,15 +83,15 @@
                 <constraint firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" id="9Li-QS-WOL"/>
                 <constraint firstItem="zwu-SL-1o3" firstAttribute="centerX" secondItem="ycQ-tE-4oj" secondAttribute="centerX" constant="-0.5" id="AfC-ko-zvc"/>
                 <constraint firstItem="ycQ-tE-4oj" firstAttribute="top" secondItem="AAf-kW-9kc" secondAttribute="top" constant="219" id="Ewl-A8-O4c"/>
-                <constraint firstAttribute="trailing" secondItem="nYp-hY-8ac" secondAttribute="trailing" id="I5x-rB-MZ5"/>
                 <constraint firstItem="zwu-SL-1o3" firstAttribute="centerX" secondItem="o12-2t-DQq" secondAttribute="centerX" id="Jka-qI-dRH"/>
                 <constraint firstItem="zwu-SL-1o3" firstAttribute="centerY" secondItem="o12-2t-DQq" secondAttribute="centerY" constant="-104" id="K4I-bl-rX2"/>
                 <constraint firstItem="zwu-SL-1o3" firstAttribute="top" secondItem="o12-2t-DQq" secondAttribute="top" constant="-104" id="Kpl-vc-J7E"/>
-                <constraint firstItem="nYp-hY-8ac" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MAC-QH-ofF"/>
+                <constraint firstItem="ADG-GN-lSY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OBZ-t0-Iwi"/>
                 <constraint firstItem="AAf-kW-9kc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="PJy-Ji-6pJ"/>
                 <constraint firstItem="ycQ-tE-4oj" firstAttribute="centerY" secondItem="AAf-kW-9kc" secondAttribute="centerY" constant="154.5" id="Vog-zd-1k3"/>
-                <constraint firstItem="nYp-hY-8ac" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zo9-iv-BPd"/>
                 <constraint firstAttribute="centerY" secondItem="AAf-kW-9kc" secondAttribute="centerY" constant="158" id="fdU-yB-Cv8"/>
+                <constraint firstAttribute="trailing" secondItem="ADG-GN-lSY" secondAttribute="trailing" id="gpp-Op-b37"/>
+                <constraint firstItem="ADG-GN-lSY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iAS-zB-lWW"/>
                 <constraint firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" constant="-10" id="kWE-01-9VF"/>
                 <constraint firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" constant="-10" id="pSB-Jb-Jkh"/>
                 <constraint firstItem="AAf-kW-9kc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="rW3-H1-VFs"/>

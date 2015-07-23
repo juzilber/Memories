@@ -12,12 +12,18 @@ class CoverVC: UIViewController {
 
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelName: UILabel!
-    @IBOutlet var imageCover: UIImageView!
+
+
+    @IBOutlet var buttonImageCover: UIButton!
     @IBOutlet var imageProfile: UIImageView!
+    
+    var image : UIImage!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        buttonImageCover.setImage(image, forState: .Normal)
 
         var daoCover = DAOCover()
         let myCover = daoCover.getData();
@@ -26,7 +32,10 @@ class CoverVC: UIViewController {
             println(myCover?.title)
             labelTitle.text = myCover?.title;
             labelName.text = myCover?.name;
-            imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile);
+            imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile)
+            buttonImageCover.imageView?.image = image
+
+            
         } else {
             println("salvou nada")
         }

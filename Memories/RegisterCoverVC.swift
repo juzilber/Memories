@@ -24,6 +24,8 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var textFieldName: UITextField!
     
+    var backImage : UIImage?
+    
     var chamada:String!
     
     override func viewDidLoad() {
@@ -81,8 +83,9 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
                 imageView.contentMode = .ScaleAspectFill
                 imageView.image = pickedImage
             } else {
-                buttonTeste2.setImage(pickedImage, forState: UIControlState.Normal)
                 buttonTeste2.imageView?.contentMode = .ScaleAspectFill
+                buttonTeste2.setImage(pickedImage, forState: UIControlState.Normal)
+                backImage = pickedImage
             }
         }
         
@@ -125,6 +128,8 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         daoCover.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
         
         var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
+        
+        controller.image = backImage
         
         self.presentViewController(controller, animated: true, completion: nil)
         
