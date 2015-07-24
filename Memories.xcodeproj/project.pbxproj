@@ -22,6 +22,8 @@
 		86EB1E941B62D1DE0026299E /* Comme-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */; };
 		86EB1E951B62D1DE0026299E /* Comme-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */; };
 		86EB1E961B62D1F10026299E /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914C1B5AB6F500114A63 /* DAOCover.swift */; };
+		86EB1EA71B62E1030026299E /* Comme-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EA61B62E1030026299E /* Comme-Medium.ttf */; };
+		86EB1EA81B62E1030026299E /* Comme-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EA61B62E1030026299E /* Comme-Medium.ttf */; };
 		B94E91281B5AB19F00114A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91271B5AB19F00114A63 /* AppDelegate.swift */; };
 		B94E912F1B5AB19F00114A63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94E912E1B5AB19F00114A63 /* Images.xcassets */; };
 		B94E91321B5AB19F00114A63 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91301B5AB19F00114A63 /* LaunchScreen.xib */; };
@@ -76,6 +78,7 @@
 		86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gidolinya-Regular.otf"; sourceTree = "<group>"; };
 		86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lavanderia Regular.otf"; sourceTree = "<group>"; };
 		86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comme-Light.ttf"; sourceTree = "<group>"; };
+		86EB1EA61B62E1030026299E /* Comme-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comme-Medium.ttf"; sourceTree = "<group>"; };
 		B94E91221B5AB19F00114A63 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E91261B5AB19F00114A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94E91271B5AB19F00114A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B485ED1B5E1B0100B00F3D /* FactData.plist */,
+				86EB1EA61B62E1030026299E /* Comme-Medium.ttf */,
 				86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */,
 				86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */,
 				86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */,
@@ -328,6 +332,7 @@
 				B94E916F1B5AB86B00114A63 /* ShowFactFamilyVC.xib in Resources */,
 				B9B485EC1B5DED3500B00F3D /* CoverData.plist in Resources */,
 				B94E91321B5AB19F00114A63 /* LaunchScreen.xib in Resources */,
+				86EB1EA71B62E1030026299E /* Comme-Medium.ttf in Resources */,
 				B94E91631B5AB81400114A63 /* RegisterCoverVC.xib in Resources */,
 				86EB1E901B62D1DE0026299E /* Gidolinya-Regular.otf in Resources */,
 				B9B485EE1B5E1B0100B00F3D /* FactData.plist in Resources */,
@@ -354,6 +359,7 @@
 				86EB1E931B62D1DE0026299E /* Lavanderia Regular.otf in Resources */,
 				86EB1E951B62D1DE0026299E /* Comme-Light.ttf in Resources */,
 				86EB1E911B62D1DE0026299E /* Gidolinya-Regular.otf in Resources */,
+				86EB1EA81B62E1030026299E /* Comme-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,7 @@
 		<string>Gidolinya-Regular.otf</string>
 		<string>Lavanderia Regular.otf</string>
 		<string>Comme-Light.ttf</string>
+		<string>Comme-Medium.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
