@@ -17,6 +17,21 @@ class RegFactCellLeftController: UITableViewCell {
     @IBOutlet var audioButton: UIButton!
     
     
+    @IBAction func textFieldEditing(sender: UITextField) {
+        var datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        datePickerView.locale = NSLocale(localeIdentifier: "pt_BR")
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("ddMMyy", options: 0, locale: NSLocale(localeIdentifier: "pt_BR"))
+        datePicker.text = dateFormatter.stringFromDate(sender.date)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

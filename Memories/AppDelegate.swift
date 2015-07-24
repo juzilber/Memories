@@ -24,21 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-
-//        var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
-//        window?.rootViewController = registerCoverVC
-//        
-        //Testar showFact
+  
+        //Definir Root View Controller
         var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
-        window?.rootViewController = registerCoverVC
-
-        
-//        //Testar showFact e registerFact
-//        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
-//        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
-//        window?.rootViewController = registerFactVC
-
+        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
+        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
+        window?.rootViewController = registerFactVC
 
         
         window?.makeKeyAndVisible()

@@ -49,11 +49,17 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
     //Carrega as informações em cada célula e define que as de número par ficam na direita, as de número ímpar na esquerda
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        //TODO: mudar depois para data só aparecer quando usuário clicar na foto. colocar um if, pra só preencher data se não tiver uma data prévia
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("ddMMyy", options: 0, locale: NSLocale(localeIdentifier: "pt_BR"))
+        formatter.stringFromDate(date)
+        
         if indexPath.row % 2 == 0 {
             var cell:RegFactCellRightController!
             cell = tableView.dequeueReusableCellWithIdentifier("RegCellRight", forIndexPath: indexPath) as! RegFactCellRightController
             
-            cell.datePicker.text = "0 dez 00"
+            cell.datePicker.text = "\(formatter.stringFromDate(date))"
             cell.subtitleTextView.text = "show do criolo na fundicao progresso um sucesso eta homem bom"
             var photo:UIImage = UIImage(named: "imageB")!
             cell.photoView.image = photo
@@ -63,7 +69,7 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
             var cell:RegFactCellLeftController!
             cell = tableView.dequeueReusableCellWithIdentifier("RegCellLeft", forIndexPath: indexPath) as! RegFactCellLeftController
             
-            cell.datePicker.text = "0 jan 00"
+            cell.datePicker.text = "\(formatter.stringFromDate(date))"
             cell.subtitleTextView.text = "meu primo henrique olha como o sorriso dele é bonito ele é tao feliz"
             var photo:UIImage = UIImage(named: "imageB")!
             cell.photoView.image = photo
