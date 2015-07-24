@@ -69,9 +69,12 @@ class DAOFact {
                         
                         //carregando a legenda
                         fact.subtitle = foto["subtitle"] as! String
-                    //data
+                        //carregando a data
+                        //carregando a foto
                         fact.photo = foto["photo"] as! [String]
-                            facts.append(fact)
+                        // carregando id
+                        
+                        facts.append(fact)
                     }
                 }
                 
@@ -79,28 +82,4 @@ class DAOFact {
             return facts
     }
     
-        //funcao pra salvar title, foto, audio[Fact]
-//    func saveData(fact : Fact, img : UIImage)
-    
-//            contents["name"] = cover.name;
-//            contents["image"] = cover.title;
-//            saveDataImgToPath(imageProfile, name: "user.png");
-//            if(imageBackground != nil){
-//                saveDataImgToPath(imageBackground!, name: "image.png");
-//            }
-//            
-//            contents.writeToFile(factPath, atomically: true)
-//        }
-        //funcao para deletar imagem
-//        private func deleteImg(name: String){
-//            let fileManager = NSFileManager.defaultManager();
-//            fileManager.removeItemAtPath(factPathDoc+"/"+name, error: nil)
-//        }
-//        
-//        //funcao pra salvar as imagens
-//        private func saveDataImgToPath(img : UIImage, name : String){
-//            UIImagePNGRepresentation(img).writeToFile(factPathDoc+"/"+name, atomically: true);
-//            
-//        }
-   
 }

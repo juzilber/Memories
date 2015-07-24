@@ -28,7 +28,7 @@ class DAOCover{
         println(coverPath)
         let fileManager = NSFileManager.defaultManager();
         
-        if(fileManager.fileExistsAtPath(coverPathDoc)){
+        if(!fileManager.fileExistsAtPath(coverPathDoc)){
             println("oi1")
             contents = NSMutableDictionary(contentsOfFile: coverPathDoc);
             if( contents == nil ){
@@ -60,6 +60,9 @@ class DAOCover{
         }
         cover.name = contents["name"] as! String;
         cover.title = contents["title"] as! String;
+        if(cover.title.isEmpty){
+            return nil;
+        }
         cover.imageProfile = coverPathDoc + "/user.png";
         let path = coverPathDoc + "/image.png";
         if(NSFileManager.defaultManager().fileExistsAtPath(path)){

@@ -127,12 +127,8 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
         daoCover.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
         
-        var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
-        
-        controller.image = backImage
-        
-        self.presentViewController(controller, animated: true, completion: nil)
-        
+//        var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
+
     }
     
     //botao para acessar a troca de imagem de capa
