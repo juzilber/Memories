@@ -129,15 +129,11 @@ class DAOFact {
                     
                     fact.subtitle = foto["subtitle"] as! String
                     
-                    //carregando a data
-                    
-                    
-                    
                     //carregando a foto
                     
                     fact.photo = foto["photo"] as! [String]
                     
-                    // carregando id
+                    // carregando audio
                     
                     fact.audio = (foto["audio"] as! String)
                     
@@ -164,7 +160,7 @@ class DAOFact {
 
         
     }
-    
+    //pegando os meses dentro daquele ano especifico
     func getAllMonthsInYear(year : String) -> [String]{
         
         return (contents[year] as! NSDictionary).allKeys as! [String]
@@ -176,7 +172,7 @@ class DAOFact {
 //    func getFactsOfMonth(year : String, month : String) -> [Fact]{
 //        
 //        let dictFacts = (contents[year] as! NSDictionary)[month] as! NSDictionary;
-//        
+//        for (contentDia, foto) in dias as! NSMutableDictionary
 //     return facts
 //    }
 }

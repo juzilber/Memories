@@ -9,6 +9,12 @@
 import UIKit
 
 class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    @IBAction func tutorialButton(sender: AnyObject) {
+        
+        var controller: TutorialVC = TutorialVC(nibName:"TutorialVC", bundle:NSBundle.mainBundle())
+        
+        presentViewController(controller, animated: true, completion: nil)
+    }
     
     //botao da imagem de capa
     @IBOutlet var buttonTeste2: UIButton!
