@@ -12,6 +12,7 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //botao da imagem de capa
     @IBOutlet var buttonTeste2: UIButton!
+    @IBOutlet var buttonCancel: UIButton!
     
     //vai pertimir acessar a camera para escolher imagem para a capa
     let imageCoverEdit = UIImagePickerController()
@@ -127,8 +128,18 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
         daoCover.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
         
-//        var controller: CoverVC = CoverVC(nibName:"CoverVC", bundle:NSBundle.mainBundle())
 
+    }
+    
+    
+    
+    @IBAction func cancelRegistration(sender: AnyObject) {
+    
+        let cover = CoverVC(nibName: "CoverVC", bundle: nil)
+        
+        //cover.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        presentViewController(cover, animated: true, completion: nil)
+        
     }
     
     //botao para acessar a troca de imagem de capa

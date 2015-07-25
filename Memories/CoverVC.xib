@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lavanderia Regular.otf">
@@ -15,6 +15,7 @@
                 <outlet property="imageProfile" destination="AAf-kW-9kc" id="4Il-k6-Rnz"/>
                 <outlet property="labelName" destination="o12-2t-DQq" id="j2b-cu-4B5"/>
                 <outlet property="labelTitle" destination="ycQ-tE-4oj" id="29g-Ni-sFS"/>
+                <outlet property="summaryBtn" destination="bqh-jp-gsU" id="UMk-tq-mfy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,8 +41,8 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiN-mg-YLY">
-                    <rect key="frame" x="30" y="30" width="30" height="30"/>
-                    <state key="normal" title="Edit">
+                    <rect key="frame" x="30" y="30" width="41" height="30"/>
+                    <state key="normal" title="Editar">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -89,6 +90,15 @@
                         <rect key="frame" x="119" y="370" width="163" height="62"/>
                     </variation>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-jp-gsU">
+                    <rect key="frame" x="500" y="30" width="57" height="30"/>
+                    <state key="normal" title="Sumário">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goToSummary:" destination="-1" eventType="touchUpInside" id="Ir8-cz-5cr"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -119,9 +129,11 @@
                 <constraint firstAttribute="trailing" secondItem="ADG-GN-lSY" secondAttribute="trailing" id="gpp-Op-b37"/>
                 <constraint firstItem="ADG-GN-lSY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iAS-zB-lWW"/>
                 <constraint firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" constant="-10" id="kWE-01-9VF"/>
+                <constraint firstAttribute="trailing" secondItem="bqh-jp-gsU" secondAttribute="trailing" constant="43" id="noB-wM-sar"/>
                 <constraint firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" constant="-10" id="pSB-Jb-Jkh"/>
                 <constraint firstItem="AAf-kW-9kc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="rW3-H1-VFs"/>
                 <constraint firstAttribute="centerY" secondItem="AAf-kW-9kc" secondAttribute="centerY" constant="155" id="s4X-dZ-hQU"/>
+                <constraint firstItem="bqh-jp-gsU" firstAttribute="baseline" secondItem="aiN-mg-YLY" secondAttribute="baseline" id="sq9-Rh-7QA"/>
                 <constraint firstItem="aiN-mg-YLY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="u4h-mS-6aj"/>
                 <constraint firstItem="aiN-mg-YLY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="v3L-2V-9nZ"/>
                 <constraint firstItem="ycQ-tE-4oj" firstAttribute="centerX" secondItem="AAf-kW-9kc" secondAttribute="centerX" constant="0.5" id="w6E-ww-ryy"/>

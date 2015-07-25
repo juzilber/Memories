@@ -10,6 +10,10 @@ import UIKit
 
 class RegisterFamilyVC: UIViewController {
 
+    @IBOutlet var cancel: UIButton!
+
+    let imageFamilyEdit = UIImagePickerController()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +26,21 @@ class RegisterFamilyVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func cancelRegistration(sender: AnyObject) {
+    
+        let view = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
+        
+        //view.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        presentViewController(view, animated: true, completion: nil)
+    
+    
     }
-    */
+
+
+
+
+
+
 
 }

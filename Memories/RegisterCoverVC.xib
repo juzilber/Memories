@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Gidolinya-Regular.otf">
+            <string>Gidolinya-Regular</string>
+        </mutableArray>
         <mutableArray key="Lavanderia Regular.otf">
             <string>Lavanderia-Regular</string>
         </mutableArray>
@@ -11,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCoverVC" customModule="Memories" customModuleProvider="target">
             <connections>
+                <outlet property="buttonCancel" destination="UHN-cK-JXn" id="kJw-aO-tIQ"/>
                 <outlet property="buttonTeste2" destination="Adi-tH-oMw" id="ulQ-8y-Y1w"/>
                 <outlet property="imageView" destination="WQr-2m-PfM" id="Lgg-2X-26Z"/>
                 <outlet property="textFieldName" destination="NW1-wo-buS" id="mAd-dd-9ay"/>
@@ -39,7 +43,7 @@
                         <action selector="buttonTesteAcao:" destination="-1" eventType="touchUpInside" id="jCu-yY-DbE"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6N-pE-blO" userLabel=" Text Field Titulo">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6N-pE-blO" userLabel=" Text Field Titulo">
                     <rect key="frame" x="200" y="285" width="200" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="F4Y-ot-CRj"/>
@@ -78,7 +82,7 @@
                         </mask>
                     </variation>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NW1-wo-buS" userLabel="Text Field Nome">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor(a)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NW1-wo-buS" userLabel="Text Field Nome">
                     <rect key="frame" x="200" y="489" width="200" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="YFi-Bi-iKT"/>
@@ -111,7 +115,9 @@
                     <state key="normal" image="cancelarama.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="widthClass=compact"/>
+                    <connections>
+                        <action selector="cancelRegistration:" destination="-1" eventType="touchUpInside" id="qpC-X2-6v5"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

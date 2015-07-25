@@ -13,6 +13,7 @@ class CoverVC: UIViewController {
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelName: UILabel!
 
+    @IBOutlet var summaryBtn: UIButton!
 
     @IBOutlet var buttonImageCover: UIButton!
     @IBOutlet var imageProfile: UIImageView!
@@ -62,4 +63,16 @@ class CoverVC: UIViewController {
         
     }
    
+    @IBAction func goToSummary(sender: AnyObject) {
+    
+    
+    
+    let viewVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
+    
+    //viewVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+    presentViewController(viewVC, animated: true, completion: nil)
+    }
+
+
+    
 }

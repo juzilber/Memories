@@ -15,13 +15,15 @@
 		60829EDB1B618AB7007D3629 /* RegFactCellRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60829EDA1B618AB7007D3629 /* RegFactCellRight.xib */; };
 		60829EE11B618D77007D3629 /* RegFactCellLeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60829EE01B618D77007D3629 /* RegFactCellLeftController.swift */; };
 		60829EE31B618D8D007D3629 /* RegFactCellRightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60829EE21B618D8D007D3629 /* RegFactCellRightController.swift */; };
+		614CC11C1B63274B0071763E /* SummaryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */; };
+		614CC11D1B63274B0071763E /* SummaryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614CC11B1B63274B0071763E /* SummaryCollectionCell.xib */; };
+		614CC1211B63362C0071763E /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614CC1201B63362C0071763E /* DAOCover.swift */; };
 		86EB1E901B62D1DE0026299E /* Gidolinya-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */; };
 		86EB1E911B62D1DE0026299E /* Gidolinya-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */; };
 		86EB1E921B62D1DE0026299E /* Lavanderia Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */; };
 		86EB1E931B62D1DE0026299E /* Lavanderia Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */; };
 		86EB1E941B62D1DE0026299E /* Comme-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */; };
 		86EB1E951B62D1DE0026299E /* Comme-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */; };
-		86EB1E961B62D1F10026299E /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914C1B5AB6F500114A63 /* DAOCover.swift */; };
 		86EB1EA71B62E1030026299E /* Comme-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EA61B62E1030026299E /* Comme-Medium.ttf */; };
 		86EB1EA81B62E1030026299E /* Comme-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EA61B62E1030026299E /* Comme-Medium.ttf */; };
 		86EB1ED71B6313E20026299E /* profileedit.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1ED61B6313E20026299E /* profileedit.png */; };
@@ -33,7 +35,6 @@
 		B94E91321B5AB19F00114A63 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91301B5AB19F00114A63 /* LaunchScreen.xib */; };
 		B94E913E1B5AB19F00114A63 /* MemoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E913D1B5AB19F00114A63 /* MemoriesTests.swift */; };
 		B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914A1B5AB6E400114A63 /* Cover.swift */; };
-		B94E914D1B5AB6F500114A63 /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914C1B5AB6F500114A63 /* DAOCover.swift */; };
 		B94E914F1B5AB70C00114A63 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E914E1B5AB70C00114A63 /* Fact.swift */; };
 		B94E91511B5AB71A00114A63 /* DAOFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91501B5AB71A00114A63 /* DAOFact.swift */; };
 		B94E91551B5AB74900114A63 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91541B5AB74900114A63 /* Family.swift */; };
@@ -79,6 +80,9 @@
 		60829EDA1B618AB7007D3629 /* RegFactCellRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegFactCellRight.xib; sourceTree = "<group>"; };
 		60829EE01B618D77007D3629 /* RegFactCellLeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegFactCellLeftController.swift; sourceTree = "<group>"; };
 		60829EE21B618D8D007D3629 /* RegFactCellRightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegFactCellRightController.swift; sourceTree = "<group>"; };
+		614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCollectionCell.swift; sourceTree = "<group>"; };
+		614CC11B1B63274B0071763E /* SummaryCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryCollectionCell.xib; sourceTree = "<group>"; };
+		614CC1201B63362C0071763E /* DAOCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCover.swift; sourceTree = "<group>"; };
 		86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gidolinya-Regular.otf"; sourceTree = "<group>"; };
 		86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lavanderia Regular.otf"; sourceTree = "<group>"; };
 		86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comme-Light.ttf"; sourceTree = "<group>"; };
@@ -96,7 +100,6 @@
 		B94E913C1B5AB19F00114A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94E913D1B5AB19F00114A63 /* MemoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTests.swift; sourceTree = "<group>"; };
 		B94E914A1B5AB6E400114A63 /* Cover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
-		B94E914C1B5AB6F500114A63 /* DAOCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCover.swift; sourceTree = "<group>"; };
 		B94E914E1B5AB70C00114A63 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		B94E91501B5AB71A00114A63 /* DAOFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFact.swift; sourceTree = "<group>"; };
 		B94E91541B5AB74900114A63 /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
@@ -212,6 +215,7 @@
 				B94E91301B5AB19F00114A63 /* LaunchScreen.xib */,
 				B94E915D1B5AB7EB00114A63 /* CoverVC.xib */,
 				B94E91611B5AB81400114A63 /* RegisterCoverVC.xib */,
+				614CC11B1B63274B0071763E /* SummaryCollectionCell.xib */,
 				B94E91651B5AB82D00114A63 /* ShowSummaryVC.xib */,
 				B94E91691B5AB85000114A63 /* ShowFactVC.xib */,
 				60829ED01B61767D007D3629 /* FactCellLeft.xib */,
@@ -231,9 +235,9 @@
 			children = (
 				B94E915A1B5AB78F00114A63 /* DataAlbumCache.swift */,
 				B94E914A1B5AB6E400114A63 /* Cover.swift */,
-				B94E914C1B5AB6F500114A63 /* DAOCover.swift */,
 				B94E91581B5AB76200114A63 /* Moment.swift */,
 				B94E914E1B5AB70C00114A63 /* Fact.swift */,
+				614CC1201B63362C0071763E /* DAOCover.swift */,
 				B94E91501B5AB71A00114A63 /* DAOFact.swift */,
 				B94E91541B5AB74900114A63 /* Family.swift */,
 				B94E91561B5AB75400114A63 /* DAOFamily.swift */,
@@ -247,6 +251,7 @@
 				B94E915C1B5AB7EB00114A63 /* CoverVC.swift */,
 				B94E91601B5AB81400114A63 /* RegisterCoverVC.swift */,
 				B94E91641B5AB82D00114A63 /* ShowSummaryVC.swift */,
+				614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */,
 				B94E91681B5AB85000114A63 /* ShowFactVC.swift */,
 				60829ED41B61769C007D3629 /* FactCellLeftController.swift */,
 				60829ED51B61769C007D3629 /* FactCellRightController.swift */,
@@ -360,6 +365,7 @@
 				86EB1E941B62D1DE0026299E /* Comme-Light.ttf in Resources */,
 				86EB1EDD1B6315050026299E /* salvarama.png in Resources */,
 				B94E912F1B5AB19F00114A63 /* Images.xcassets in Resources */,
+				614CC11D1B63274B0071763E /* SummaryCollectionCell.xib in Resources */,
 				86EB1EDB1B6314FA0026299E /* cancelarama.png in Resources */,
 				60829ED21B61767D007D3629 /* FactCellLeft.xib in Resources */,
 				60829ED31B61767D007D3629 /* FactCellRight.xib in Resources */,
@@ -389,7 +395,7 @@
 			files = (
 				60829EE31B618D8D007D3629 /* RegFactCellRightController.swift in Sources */,
 				B94E91571B5AB75400114A63 /* DAOFamily.swift in Sources */,
-				B94E914D1B5AB6F500114A63 /* DAOCover.swift in Sources */,
+				614CC11C1B63274B0071763E /* SummaryCollectionCell.swift in Sources */,
 				60829ED61B61769C007D3629 /* FactCellLeftController.swift in Sources */,
 				B94E91661B5AB82D00114A63 /* ShowSummaryVC.swift in Sources */,
 				B94E916A1B5AB85000114A63 /* ShowFactVC.swift in Sources */,
@@ -401,6 +407,7 @@
 				B94E916E1B5AB86B00114A63 /* ShowFactFamilyVC.swift in Sources */,
 				B94E91761B5AB89C00114A63 /* RegisterFamilyVC.swift in Sources */,
 				B94E91551B5AB74900114A63 /* Family.swift in Sources */,
+				614CC1211B63362C0071763E /* DAOCover.swift in Sources */,
 				B94E915B1B5AB78F00114A63 /* DataAlbumCache.swift in Sources */,
 				B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */,
 				B94E91721B5AB88800114A63 /* RegisterFactVC.swift in Sources */,
@@ -415,7 +422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EB1E961B62D1F10026299E /* DAOCover.swift in Sources */,
 				B94E913E1B5AB19F00114A63 /* MemoriesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
