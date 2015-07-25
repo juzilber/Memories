@@ -29,12 +29,13 @@ class CoverVC: UIViewController {
         var daoCover = DAOCover()
         let myCover = daoCover.getData();
         if(myCover != nil){
-            println("\n\n\n\nAQUI\n\n\n\n")
+            
             println(myCover?.title)
             labelTitle.text = myCover?.title;
             labelName.text = myCover?.name;
             imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile)
-            buttonImageCover.imageView?.image = image
+            image = UIImage(contentsOfFile: myCover!.imageBackground);
+            buttonImageCover.setImage(image, forState: .Normal);
 
             
         } else {
