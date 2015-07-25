@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowSummaryVC" customModule="Memories" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="MnL-qb-B1A" id="cob-aa-Gfw"/>
-                <outlet property="presentShowFactVC" destination="76b-yR-71T" id="L9M-IH-XiP"/>
                 <outlet property="registerFamilyBtn" destination="8Nq-7L-zee" id="e0Z-dw-aux"/>
                 <outlet property="tableView" destination="M7b-cx-unB" id="s1P-p9-lNU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,8 +28,8 @@
                         <outlet property="delegate" destination="-1" id="wKE-ts-Lcm"/>
                     </connections>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sumário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euR-74-a3Y">
-                    <rect key="frame" x="120" y="21" width="71" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sumário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euR-74-a3Y">
+                    <rect key="frame" x="137" y="21" width="54" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -38,8 +37,8 @@
                         <rect key="frame" x="168" y="22" width="64" height="21"/>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Momentos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62d-5G-ez3">
-                    <rect key="frame" x="9" y="45" width="106" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Momentos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62d-5G-ez3">
+                    <rect key="frame" x="9" y="45" width="123" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -84,9 +83,9 @@
                         <rect key="frame" x="306" y="508" width="51" height="31"/>
                     </variation>
                 </switch>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nq-7L-zee">
-                    <rect key="frame" x="24" y="435" width="46" height="30"/>
-                    <state key="normal" title="Button">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nq-7L-zee">
+                    <rect key="frame" x="24" y="435" width="63" height="30"/>
+                    <state key="normal" title="+Familiar">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
@@ -96,8 +95,8 @@
                         <action selector="segueToRegisterFamily:" destination="-1" eventType="touchUpInside" id="Ty6-Y0-7hf"/>
                     </connections>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-qb-B1A">
-                    <rect key="frame" x="90" y="392" width="510" height="115"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-qb-B1A">
+                    <rect key="frame" x="107" y="392" width="493" height="115"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" priority="900" constant="510" id="bsz-5A-Jcw"/>

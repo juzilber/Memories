@@ -127,7 +127,9 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         var daoCover = DAOCover()
         
         daoCover.saveData(cover, imageProfile: imageView.image!, imageBackground: buttonTeste2.imageView!.image)
-        
+       
+        let coverVC = CoverVC(nibName: "CoverVC", bundle: nil)
+        presentViewController(coverVC, animated: true, completion: nil)
 
     }
     

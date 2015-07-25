@@ -55,22 +55,21 @@ class CoverVC: UIViewController {
 
     
     //botao edit que leva pra RegisterCoverVC
-    func buttonEdit(sender: AnyObject) {
-        
+    @IBAction func editCover(sender: AnyObject) {
         var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
         
         self.presentViewController(controller, animated: true, completion: nil)
-        
     }
+    
    
     @IBAction func goToSummary(sender: AnyObject) {
     
     
     
-    let viewVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
+    let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
     
     //viewVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-    presentViewController(viewVC, animated: true, completion: nil)
+    presentViewController(ssVC, animated: true, completion: nil)
     }
 
 
