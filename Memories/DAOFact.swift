@@ -99,6 +99,7 @@ class DAOFact {
                     
                     
                     //celula com imagem+legenda+audio
+                    
                     var fact : Fact = Fact()
                     
                     //carregando a foto
@@ -150,8 +151,7 @@ class DAOFact {
 //        
 //        let dictFacts = (contents[year] as! NSDictionary)[month] as! NSDictionary;
 //        for (contentDia, foto) in dictFacts as! NSMutableDictionary{
-//            var facts = [Fact]()
-//            
+//            return//            
 //        }
 //       photo.append(dictFacts)
 //        

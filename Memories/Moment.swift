@@ -23,4 +23,8 @@ class Moment : NSObject{
     let rootPath: String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
     player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: rootPath.stringByAppendingPathComponent(audio)), error: nil)
     }
+    
+    override init(){
+        super.init();
+    }
 }
