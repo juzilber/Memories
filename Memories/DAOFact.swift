@@ -14,10 +14,7 @@ import UIKit
 private let _daoFact = DAOFact()
 
 
-
 class DAOFact {
-    
-    
     
     class var sharedInstance: DAOFact {
         
@@ -25,20 +22,9 @@ class DAOFact {
         
     }
     
-    
-    
-    
-    
-    //carregar plist de texto(titulo+nome)
-    
+    //carregar plist
     //carregar fotos(perfil+background)
-    
     //load plist, testar, save, excluir, edit
-    
-    
-    
-    
-    
     
     
     private var contents : NSMutableDictionary!;
@@ -57,7 +43,7 @@ class DAOFact {
         
         factPathDoc = documentPath.stringByAppendingPathComponent("Fact")
         
-        factPath = documentPath.stringByAppendingPathComponent("Fact/CoverData.plist");
+        factPath = documentPath.stringByAppendingPathComponent("Fact/FactData.plist");
         
         println(factPath)
         
@@ -79,21 +65,13 @@ class DAOFact {
             
         }
         
-        
-        
     }
-    
-    
-    
+
     private func createDict(){
-        
-        
         
         contents = NSMutableDictionary();
         
         contents.writeToFile(factPath, atomically: true);
-        
-        
         
     }
     
@@ -107,7 +85,7 @@ class DAOFact {
         
         //instanciando a classe Fact(passando informacoes da classe para a plist)
         
-        //vetor de facts que salva facts
+        //vetor de facts que salva facts (pagina inteira)
         
         var facts : [Fact] = [Fact]()
         
@@ -120,18 +98,19 @@ class DAOFact {
                 for (contentDia, foto) in dias as! NSMutableDictionary{
                     
                     
-                    
+                    //celula com imagem+legenda+audio
                     var fact : Fact = Fact()
                     
+                    //carregando a foto
+                    
+                    fact.photo = foto["photo"] as! [String]
                     
                     
                     //carregando a legenda
                     
                     fact.subtitle = foto["subtitle"] as! String
                     
-                    //carregando a foto
                     
-                    fact.photo = foto["photo"] as! [String]
                     
                     // carregando audio
                     
@@ -145,13 +124,12 @@ class DAOFact {
                 
             }
             
-            
-            
         }
         
         return facts;
         
     }
+    
     //pegando os anos
     func getAllYears() -> [String]{
     
@@ -166,13 +144,16 @@ class DAOFact {
         return (contents[year] as! NSDictionary).allKeys as! [String]
         
     }
+
     
-    
-//    
 //    func getFactsOfMonth(year : String, month : String) -> [Fact]{
 //        
 //        let dictFacts = (contents[year] as! NSDictionary)[month] as! NSDictionary;
-//        for (contentDia, foto) in dias as! NSMutableDictionary
-//     return facts
+//        for (contentDia, foto) in dictFacts as! NSMutableDictionary{
+//            var facts = [Fact]()
+//            
+//        }
+//       photo.append(dictFacts)
+//        
 //    }
 }

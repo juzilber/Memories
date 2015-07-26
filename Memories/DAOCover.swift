@@ -9,28 +9,39 @@
 import Foundation
 import UIKit
 
-class DAOCover{
+private let _daoCover = DAOCover()
 
+
+class DAOCover {
+    
+    class var sharedInstance: DAOCover {
+        
+        return _daoCover
+        
+    }
     
     //carregar plist de texto(titulo+nome)
     //carregar fotos(perfil+background)
     //load plist, testar, save, excluir, edit
     
     private var contents : NSMutableDictionary!;
-    private let coverPath : String;
-    private let coverPathDoc : String;
+    private let coverPath : String; //pasta Cover
+    private let coverPathDoc : String; //conteudo dentro da pasta Cover
     
     //inicializa a classe
     init(){
         var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
+        
         coverPathDoc = documentPath.stringByAppendingPathComponent("Cover")
         coverPath = documentPath.stringByAppendingPathComponent("Cover/CoverData.plist");
+        
         println(coverPath)
         println(coverPathDoc)
+        
         let fileManager = NSFileManager.defaultManager();
         
         if(fileManager.fileExistsAtPath(coverPathDoc)){
-            println("oi1")
+            
             contents = NSMutableDictionary(contentsOfFile: coverPath);
             if( contents == nil ){
                 contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
@@ -46,7 +57,7 @@ class DAOCover{
     }
     
     private func createDict(){
-        println("entrou!!")
+        println("entrou!")
         contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
         contents.writeToFile(coverPath, atomically: true);
         

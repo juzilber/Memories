@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
         //Definir Root View Controller
         var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
-//        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
-//        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
+        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
+        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
         window?.rootViewController = registerCoverVC
 
         

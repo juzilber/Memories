@@ -11,6 +11,4 @@ import UIKit
 class Family : Moment {
 
     
-    //Ju, essa variável diz respeito ao grau de parentesco do familiar adicionado: pai, mãe, amigo, irmão etc
-    var connection:String?
 }

@@ -30,6 +30,7 @@
 		86EB1ED91B6314510026299E /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1ED81B6314510026299E /* white.jpg */; };
 		86EB1EDB1B6314FA0026299E /* cancelarama.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EDA1B6314FA0026299E /* cancelarama.png */; };
 		86EB1EDD1B6315050026299E /* salvarama.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EB1EDC1B6315050026299E /* salvarama.png */; };
+		B90BAD081B646742009FB1AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BAD071B646742009FB1AD /* Extensions.swift */; };
 		B94E91281B5AB19F00114A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E91271B5AB19F00114A63 /* AppDelegate.swift */; };
 		B94E912F1B5AB19F00114A63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94E912E1B5AB19F00114A63 /* Images.xcassets */; };
 		B94E91321B5AB19F00114A63 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91301B5AB19F00114A63 /* LaunchScreen.xib */; };
@@ -93,6 +94,7 @@
 		86EB1ED81B6314510026299E /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
 		86EB1EDA1B6314FA0026299E /* cancelarama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelarama.png; sourceTree = "<group>"; };
 		86EB1EDC1B6315050026299E /* salvarama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salvarama.png; sourceTree = "<group>"; };
+		B90BAD071B646742009FB1AD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B94E91221B5AB19F00114A63 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E91261B5AB19F00114A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94E91271B5AB19F00114A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,11 +186,11 @@
 				86EB1EDA1B6314FA0026299E /* cancelarama.png */,
 				86EB1EDC1B6315050026299E /* salvarama.png */,
 				86EB1ED81B6314510026299E /* white.jpg */,
-				B9B485ED1B5E1B0100B00F3D /* FactData.plist */,
 				86EB1EA61B62E1030026299E /* Comme-Medium.ttf */,
 				86EB1E8D1B62D1DE0026299E /* Gidolinya-Regular.otf */,
 				86EB1E8E1B62D1DE0026299E /* Lavanderia Regular.otf */,
 				86EB1E8F1B62D1DE0026299E /* Comme-Light.ttf */,
+				B9B485ED1B5E1B0100B00F3D /* FactData.plist */,
 				B94E91261B5AB19F00114A63 /* Info.plist */,
 				B9B485EB1B5DED3500B00F3D /* CoverData.plist */,
 			);
@@ -240,12 +242,13 @@
 			children = (
 				B94E915A1B5AB78F00114A63 /* DataAlbumCache.swift */,
 				B94E914A1B5AB6E400114A63 /* Cover.swift */,
+				614CC1201B63362C0071763E /* DAOCover.swift */,
 				B94E91581B5AB76200114A63 /* Moment.swift */,
 				B94E914E1B5AB70C00114A63 /* Fact.swift */,
-				614CC1201B63362C0071763E /* DAOCover.swift */,
 				B94E91501B5AB71A00114A63 /* DAOFact.swift */,
 				B94E91541B5AB74900114A63 /* Family.swift */,
 				B94E91561B5AB75400114A63 /* DAOFamily.swift */,
+				B90BAD071B646742009FB1AD /* Extensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				B94E915B1B5AB78F00114A63 /* DataAlbumCache.swift in Sources */,
 				B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */,
 				B94E91721B5AB88800114A63 /* RegisterFactVC.swift in Sources */,
+				B90BAD081B646742009FB1AD /* Extensions.swift in Sources */,
 				B94E914F1B5AB70C00114A63 /* Fact.swift in Sources */,
 				B9BB5E691B643F4900C3A814 /* RegisterCoverVC.swift in Sources */,
 				B94E91591B5AB76200114A63 /* Moment.swift in Sources */,
@@ -497,6 +501,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -532,6 +537,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
