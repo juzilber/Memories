@@ -8,7 +8,7 @@
 
 
 import UIKit
-
+import AVFoundation
 
 
 private let _daoFact = DAOFact()
@@ -66,7 +66,7 @@ class DAOFact {
         }
         
     }
-
+    
     private func createDict(){
         
         contents = NSMutableDictionary();
@@ -95,32 +95,32 @@ class DAOFact {
             
             for (contentMes, dias) in meses as! NSMutableDictionary{
                 
-                for (contentDia, foto) in dias as! NSMutableDictionary{
+                for (contentDia, fotos) in dias as! NSMutableDictionary{
                     
-                    
-                    //celula com imagem+legenda+audio
-                    
-                    var fact : Fact = Fact()
-                    
-                    //carregando a foto
-                    
-                    fact.photo = foto["photo"] as! [String]
-                    
-                    
-                    //carregando a legenda
-                    
-                    fact.subtitle = foto["subtitle"] as! String
-                    
-                    
-                    
-                    // carregando audio
-                    
-                    fact.audio = (foto["audio"] as! String)
-                    
-                    
-                    
-                    facts.append(fact)
-                    
+                    for foto in fotos as! NSArray{
+                        //celula com imagem+legenda+audio
+                        
+                        var fact : Fact = Fact()
+                        
+                        //carregando a foto
+                        
+                        fact.photo = foto["photo"] as! [String]
+                        
+                        
+                        //carregando a legenda
+                        
+                        fact.subtitle = foto["subtitle"] as! String
+                        
+                        
+                        
+                        // carregando audio
+                        
+                        fact.audio = (foto["audio"] as! String)
+                        
+                        
+                        
+                        facts.append(fact)
+                    }
                 }
                 
             }
@@ -131,12 +131,13 @@ class DAOFact {
         
     }
     
+    
     //pegando os anos
     func getAllYears() -> [String]{
-    
+        
         
         return contents.allKeys as! [String];
-
+        
         
     }
     //pegando os meses dentro daquele ano especifico
@@ -145,15 +146,62 @@ class DAOFact {
         return (contents[year] as! NSDictionary).allKeys as! [String]
         
     }
-
     
-//    func getFactsOfMonth(year : String, month : String) -> [Fact]{
-//        
-//        let dictFacts = (contents[year] as! NSDictionary)[month] as! NSDictionary;
-//        for (contentDia, foto) in dictFacts as! NSMutableDictionary{
-//            return//            
-//        }
-//       photo.append(dictFacts)
-//        
-//    }
+    func getFactsOfMonth(year : String, month : String) -> [Fact]{
+        var photos = [Fact]();
+        let dias = (contents[year] as! NSDictionary)[month] as! NSDictionary;
+        for (contentDia, fotos) in dias as! NSMutableDictionary{
+            
+            for foto in fotos as! NSArray{
+                //celula com imagem+legenda+audio
+                
+                var fact : Fact = Fact()
+                
+                //carregando a foto
+                
+                fact.photo = foto["photo"] as! [String]
+                
+                
+                //carregando a legenda
+                
+                fact.subtitle = foto["subtitle"] as! String
+                
+                
+                // carregando audio
+                
+                fact.audio = (foto["audio"] as! String)
+                
+                
+                photos.append(fact)
+            }
+        }
+        return photos;
+    }
+    
+    func saveNewFact(fact : Fact, imgs : [UIImage], audio : AVAudioPlayer){
+        //salvando o fact (foto+legenda+audio)
+        //        let photosStrings = saveDataImgToPath(imgs);
+        //        fact.photo = photosStrings;
+        var factDict = NSMutableDictionary(objects: [fact.photo,fact.subtitle,fact.audio!], forKeys: ["photo","subtitle","audio"])
+        
+        var format = NSDateFormatter();
+        //declarando ano mes e dia"yyyy-MM-dd"
+        format.dateFormat = "yyyy";
+        let year = format.stringFromDate(fact.date!);
+        format.dateFormat = "MM";
+        let month = format.stringFromDate(fact.date!);
+        format.dateFormat = "dd";
+        let day = format.stringFromDate(fact.date!);
+        
+        //organizando os fatos em ano mes e dia
+        var ddd = (((contents[year] as! NSMutableDictionary)[month] as! NSMutableDictionary)[day] as! [NSMutableDictionary]);
+        ddd.append(factDict);
+        
+        contents.writeToFile(factPath, atomically: true);
+        
+        //        private func saveDataImgToPath(img : [UIImage]) -> [String]{
+        //            
+        //            
+        //        }
+    }
 }
