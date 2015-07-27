@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		606BE5B11B66CDD7007F6C23 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BE5AF1B66CDD7007F6C23 /* PageViewController.swift */; };
+		606BE5B21B66CDD7007F6C23 /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606BE5B01B66CDD7007F6C23 /* PageViewController.xib */; };
+		606BE5C11B66D35B007F6C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BE5BF1B66D35B007F6C23 /* ViewController.swift */; };
+		606BE5C21B66D35B007F6C23 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606BE5C01B66D35B007F6C23 /* ViewController.xib */; };
 		60829ED21B61767D007D3629 /* FactCellLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60829ED01B61767D007D3629 /* FactCellLeft.xib */; };
 		60829ED31B61767D007D3629 /* FactCellRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60829ED11B61767D007D3629 /* FactCellRight.xib */; };
 		60829ED61B61769C007D3629 /* FactCellLeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60829ED41B61769C007D3629 /* FactCellLeftController.swift */; };
@@ -86,6 +90,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		606BE5AF1B66CDD7007F6C23 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		606BE5B01B66CDD7007F6C23 /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
+		606BE5BF1B66D35B007F6C23 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		606BE5C01B66D35B007F6C23 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		60829ED01B61767D007D3629 /* FactCellLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FactCellLeft.xib; sourceTree = "<group>"; };
 		60829ED11B61767D007D3629 /* FactCellRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FactCellRight.xib; sourceTree = "<group>"; };
 		60829ED41B61769C007D3629 /* FactCellLeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactCellLeftController.swift; sourceTree = "<group>"; };
@@ -172,6 +180,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		606BE5A81B66CD5A007F6C23 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				606BE5BF1B66D35B007F6C23 /* ViewController.swift */,
+				606BE5C01B66D35B007F6C23 /* ViewController.xib */,
+				B94E91681B5AB85000114A63 /* ShowFactVC.swift */,
+				606BE5AF1B66CDD7007F6C23 /* PageViewController.swift */,
+				606BE5B01B66CDD7007F6C23 /* PageViewController.xib */,
+				60829ED41B61769C007D3629 /* FactCellLeftController.swift */,
+				60829ED51B61769C007D3629 /* FactCellRightController.swift */,
+			);
+			name = PageViewController;
+			sourceTree = "<group>";
+		};
 		B94E91191B5AB19F00114A63 = {
 			isa = PBXGroup;
 			children = (
@@ -294,9 +316,7 @@
 				B94E91641B5AB82D00114A63 /* ShowSummaryVC.swift */,
 				614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */,
 				B9BB5E681B643F4900C3A814 /* RegisterCoverVC.swift */,
-				B94E91681B5AB85000114A63 /* ShowFactVC.swift */,
-				60829ED41B61769C007D3629 /* FactCellLeftController.swift */,
-				60829ED51B61769C007D3629 /* FactCellRightController.swift */,
+				606BE5A81B66CD5A007F6C23 /* PageViewController */,
 				B94E91701B5AB88800114A63 /* RegisterFactVC.swift */,
 				60829EE01B618D77007D3629 /* RegFactCellLeftController.swift */,
 				60829EE21B618D8D007D3629 /* RegFactCellRightController.swift */,
@@ -416,7 +436,9 @@
 				B9BB5E6D1B643F9300C3A814 /* TutorialVC.xib in Resources */,
 				B94E912F1B5AB19F00114A63 /* Images.xcassets in Resources */,
 				614CC11D1B63274B0071763E /* SummaryCollectionCell.xib in Resources */,
+				606BE5B21B66CDD7007F6C23 /* PageViewController.xib in Resources */,
 				866993E01B6567E2004C6DEF /* sumario.png in Resources */,
+				606BE5C21B66D35B007F6C23 /* ViewController.xib in Resources */,
 				864C627C1B65B39B0098A94A /* faixaazulescura.png in Resources */,
 				864C627E1B65C1DE0098A94A /* profedit.png in Resources */,
 				B9BB5E6B1B643F7600C3A814 /* RegisterCoverVC.xib in Resources */,
@@ -458,10 +480,12 @@
 				B94E91281B5AB19F00114A63 /* AppDelegate.swift in Sources */,
 				B9BB5E6F1B643FD900C3A814 /* TutorialVC.swift in Sources */,
 				B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */,
+				606BE5B11B66CDD7007F6C23 /* PageViewController.swift in Sources */,
 				60829EE11B618D77007D3629 /* RegFactCellLeftController.swift in Sources */,
 				B94E916E1B5AB86B00114A63 /* ShowFactFamilyVC.swift in Sources */,
 				B94E91761B5AB89C00114A63 /* RegisterFamilyVC.swift in Sources */,
 				B94E91551B5AB74900114A63 /* Family.swift in Sources */,
+				606BE5C11B66D35B007F6C23 /* ViewController.swift in Sources */,
 				614CC1211B63362C0071763E /* DAOCover.swift in Sources */,
 				B94E915B1B5AB78F00114A63 /* DataAlbumCache.swift in Sources */,
 				B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */,

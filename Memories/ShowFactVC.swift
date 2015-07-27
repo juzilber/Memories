@@ -17,6 +17,10 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var screenHeight: CGFloat!
     var screenWidht: CGFloat!
     
+    //THIS
+    var pageIndex: Int!
+    var id:Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +33,9 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.scrollEnabled = false
+        tableView.allowsSelection = false
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         //Calcula a altura da tela para definir a altura de cada célula
         screenSize = UIScreen.mainScreen().bounds
@@ -48,7 +55,9 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //Carrega as informações em cada célula e define que as de número par ficam na direita, as de número ímpar na esquerda
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row % 2 == 0 {
+        id = indexPath.row + (pageIndex*3)
+        
+        if id % 2 == 0 {
             var cell:FactCellRightController!
             cell = tableView.dequeueReusableCellWithIdentifier("CellRight", forIndexPath: indexPath) as! FactCellRightController
             
@@ -71,6 +80,30 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
         
+//        
+//        if indexPath.row % 2 == 0 {
+//            var cell:FactCellRightController!
+//            cell = tableView.dequeueReusableCellWithIdentifier("CellRight", forIndexPath: indexPath) as! FactCellRightController
+//            
+//            cell.dateLabel.text = "0 dez 00"
+//            cell.subtitleLabel.text = "show do criolo na fundicao progresso um sucesso eta homem bom"
+//            var photo:UIImage = UIImage(named: "imageB")!
+//            cell.photoView.image = photo
+//            
+//            return cell
+//        } else {
+//            var cell:FactCellLeftController!
+//            cell = tableView.dequeueReusableCellWithIdentifier("CellLeft", forIndexPath: indexPath) as! FactCellLeftController
+//            
+//            cell.dateLabel.text = "0 jan 00"
+//            cell.subtitleLabel.text = "meu primo henrique olha como o sorriso dele é bonito ele é tao feliz"
+//            var photo:UIImage = UIImage(named: "imageB")!
+//            cell.photoView.image = photo
+//            
+//            return cell
+//        }
+//        
+        
     }
     
     //Define a altura de cada célula
@@ -84,6 +117,5 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         
     }
-    
     
 }

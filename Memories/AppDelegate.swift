@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
         var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
         var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
-        window?.rootViewController = registerCoverVC
+        var viewController: ViewController = ViewController(nibName:"ViewController", bundle: nil)
+        window?.rootViewController = viewController
 
         
         window?.makeKeyAndVisible()
