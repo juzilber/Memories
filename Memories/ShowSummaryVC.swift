@@ -23,6 +23,10 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        rightSwipe.direction = .Right
+        view.addGestureRecognizer(rightSwipe)
 
         // Do any additional setup after loading the view.
     
@@ -92,11 +96,15 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
-        headerView.backgroundColor = UIColor.blueColor()
+        headerView.backgroundColor = UIColor(red: 171/255, green: 200/255, blue: 226/255, alpha: 1.0)
         headerView.tag = section
+        headerView.layer.cornerRadius = 10
+        headerView.layer.masksToBounds = true
+
         
         let headerString = UILabel(frame: CGRect(x: 10, y: 10, width: tableView.frame.size.width-10, height: 30)) as UILabel
         headerString.text = sectionTitleArray.objectAtIndex(section) as? String
+        headerString.textColor = UIColor.whiteColor()
         headerView .addSubview(headerString)
         
         let headerTapped = UITapGestureRecognizer (target: self, action:"sectionHeaderTapped:")
@@ -138,7 +146,10 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         else{
             var content = sectionContentDict .valueForKey(sectionTitleArray.objectAtIndex(indexPath.section) as! String) as! NSArray
             cell.textLabel?.text = content .objectAtIndex(indexPath.row) as? String
-            cell.backgroundColor = UIColor .yellowColor()
+            cell.textLabel?.textColor = UIColor.blackColor()
+            cell.backgroundColor = UIColor(red: 255/255, green: 252/255, blue: 180/255, alpha: 1.0)
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
         }
         
         return cell
@@ -165,11 +176,15 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         collCell.descriptionLbl.text = "text"
         
+//        collCell.backgroundColor
+        
+        
         
         //Set a circular imageView
+
         collCell.summaryImgCell.layer.borderWidth = 2
         collCell.summaryImgCell.layer.masksToBounds = false
-        collCell.summaryImgCell.layer.borderColor = UIColor.blackColor().CGColor
+        collCell.summaryImgCell.layer.borderColor = UIColor(red: 171/255, green: 200/255, blue: 226/255, alpha: 1.0).CGColor
         collCell.summaryImgCell.layer.cornerRadius = collCell.frame.size.height/3
         collCell.summaryImgCell.clipsToBounds = true
         
@@ -198,6 +213,18 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         presentViewController(sfVC, animated: true, completion: nil)
 
     }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Right) {
+            
+            let backVC = CoverVC(nibName: "CoverVC", bundle: nil)
+            
+            backVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+            presentViewController(backVC, animated: true, completion: nil)
+            
+        }
+    }
+
     
     
     

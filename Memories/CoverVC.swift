@@ -9,6 +9,8 @@
 import UIKit
 
 class CoverVC: UIViewController {
+    
+
 
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelName: UILabel!
@@ -21,6 +23,16 @@ class CoverVC: UIViewController {
     var image : UIImage!
     
     override func viewDidLoad() {
+        
+        
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
         
         super.viewDidLoad()
         
@@ -53,24 +65,47 @@ class CoverVC: UIViewController {
         
         
     }
-
     
     //botao edit que leva pra RegisterCoverVC
     @IBAction func editCover(sender: AnyObject) {
+        
+     
+
         var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
+        
         
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
    
     @IBAction func goToSummary(sender: AnyObject) {
+        
+        let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
     
-    
-    
-    let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
-    
-    //viewVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
     presentViewController(ssVC, animated: true, completion: nil)
+    }
+    
+  
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            
+            let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
+            
+            ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+            presentViewController(ssVC, animated: true, completion: nil)
+           
+        }
+        
+        if (sender.direction == .Right) {
+            println("Swipe Right")
+            
+            var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
+            controller.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+            self.presentViewController(controller, animated: true, completion: nil)
+         
+        }
     }
 
 

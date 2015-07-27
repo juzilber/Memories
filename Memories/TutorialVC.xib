@@ -66,13 +66,13 @@
                     <exclude reference="XWv-08-o8S"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="dql-3r-hMb"/>
-                    <exclude reference="k25-ey-E6Z"/>
-                    <exclude reference="xPG-lE-lYm"/>
                     <exclude reference="BpW-8Y-oKO"/>
                     <exclude reference="Bsb-0H-chr"/>
                     <exclude reference="Mg6-Vd-VK1"/>
                     <exclude reference="a7J-6g-Hd1"/>
+                    <exclude reference="dql-3r-hMb"/>
+                    <exclude reference="k25-ey-E6Z"/>
+                    <exclude reference="xPG-lE-lYm"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -81,13 +81,13 @@
                     <include reference="XWv-08-o8S"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="dql-3r-hMb"/>
-                    <include reference="k25-ey-E6Z"/>
-                    <include reference="xPG-lE-lYm"/>
                     <include reference="BpW-8Y-oKO"/>
                     <include reference="Bsb-0H-chr"/>
                     <include reference="Mg6-Vd-VK1"/>
                     <include reference="a7J-6g-Hd1"/>
+                    <include reference="dql-3r-hMb"/>
+                    <include reference="k25-ey-E6Z"/>
+                    <include reference="xPG-lE-lYm"/>
                 </mask>
             </variation>
         </view>
