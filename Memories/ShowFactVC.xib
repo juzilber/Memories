@@ -2,11 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowFactVC" customModule="Memories" customModuleProvider="target">
             <connections>
-                <outlet property="editButton" destination="G7Q-b8-7SP" id="Tll-tM-ZtQ"/>
                 <outlet property="tableView" destination="Pca-J1-JGY" id="DiB-NB-ya9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,48 +16,69 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-b8-7SP">
-                    <rect key="frame" x="21" y="8" width="52" height="38"/>
-                    <state key="normal" title="EDITAR">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="15" y="18" width="52" height="30"/>
-                    </variation>
-                </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-J1-JGY">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BLT-4D-agJ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="26" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-J1-JGY">
                     <rect key="frame" x="0.0" y="54" width="600" height="546"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Pca-J1-JGY" secondAttribute="bottom" id="2k7-Nt-EMH"/>
-                <constraint firstItem="G7Q-b8-7SP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="DQi-gE-tjz"/>
-                <constraint firstItem="G7Q-b8-7SP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="Koh-BP-LmO"/>
-                <constraint firstItem="Pca-J1-JGY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="TvA-XQ-mBp"/>
-                <constraint firstItem="Pca-J1-JGY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="ZGp-G6-07q"/>
-                <constraint firstAttribute="trailing" secondItem="Pca-J1-JGY" secondAttribute="trailing" id="eKP-7F-anl"/>
-                <constraint firstItem="Pca-J1-JGY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eZh-fK-pGJ"/>
+                <constraint firstAttribute="bottom" secondItem="Pca-J1-JGY" secondAttribute="bottom" constant="-23" id="20h-Fk-UDD">
+                    <variation key="widthClass=compact" constant="-35"/>
+                </constraint>
+                <constraint firstItem="BLT-4D-agJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7Di-yd-bXN"/>
+                <constraint firstItem="BLT-4D-agJ" firstAttribute="centerX" secondItem="Pca-J1-JGY" secondAttribute="centerX" id="NX3-An-jao"/>
+                <constraint firstAttribute="bottom" secondItem="BLT-4D-agJ" secondAttribute="bottom" constant="-15" id="PL6-sb-3P6"/>
+                <constraint firstAttribute="trailing" secondItem="BLT-4D-agJ" secondAttribute="trailing" id="VoT-hO-SP1"/>
+                <constraint firstItem="Pca-J1-JGY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="W5L-M6-68d"/>
+                <constraint firstItem="Pca-J1-JGY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="dzX-WS-Rd9">
+                    <variation key="widthClass=compact" constant="38"/>
+                </constraint>
+                <constraint firstItem="BLT-4D-agJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yim-Jx-uyu"/>
             </constraints>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="BLT-4D-agJ"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="TvA-XQ-mBp"/>
+                    <exclude reference="7Di-yd-bXN"/>
+                    <exclude reference="NX3-An-jao"/>
+                    <exclude reference="PL6-sb-3P6"/>
+                    <exclude reference="VoT-hO-SP1"/>
+                    <exclude reference="yim-Jx-uyu"/>
+                    <exclude reference="20h-Fk-UDD"/>
+                    <exclude reference="W5L-M6-68d"/>
+                    <exclude reference="dzX-WS-Rd9"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="BLT-4D-agJ"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="7Di-yd-bXN"/>
+                    <include reference="NX3-An-jao"/>
+                    <include reference="PL6-sb-3P6"/>
+                    <include reference="VoT-hO-SP1"/>
+                    <include reference="yim-Jx-uyu"/>
+                    <include reference="20h-Fk-UDD"/>
+                    <include reference="W5L-M6-68d"/>
+                    <include reference="dzX-WS-Rd9"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="G7Q-b8-7SP"/>
                     <include reference="Pca-J1-JGY"/>
                 </mask>
-                <mask key="constraints">
-                    <include reference="2k7-Nt-EMH"/>
-                    <include reference="TvA-XQ-mBp"/>
-                    <include reference="eKP-7F-anl"/>
-                    <include reference="eZh-fK-pGJ"/>
-                </mask>
             </variation>
-            <point key="canvasLocation" x="301" y="210"/>
+            <point key="canvasLocation" x="299" y="211"/>
         </view>
     </objects>
+    <resources>
+        <image name="white.jpg" width="3888" height="2592"/>
+    </resources>
 </document>
