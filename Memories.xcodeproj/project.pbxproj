@@ -56,6 +56,7 @@
 		B94E91771B5AB89C00114A63 /* RegisterFamilyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */; };
 		B94E917E1B5AE92900114A63 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */; };
 		B94E917F1B5AE92900114A63 /* ShowPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */; };
+		B9B184D71B66F8E50076835E /* DAOAuxiliar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B184D61B66F8E50076835E /* DAOAuxiliar.swift */; };
 		B9B485EC1B5DED3500B00F3D /* CoverData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B485EB1B5DED3500B00F3D /* CoverData.plist */; };
 		B9B485EE1B5E1B0100B00F3D /* FactData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B485ED1B5E1B0100B00F3D /* FactData.plist */; };
 		B9BB5E691B643F4900C3A814 /* RegisterCoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB5E681B643F4900C3A814 /* RegisterCoverVC.swift */; };
@@ -124,6 +125,7 @@
 		B94E91751B5AB89C00114A63 /* RegisterFamilyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFamilyVC.xib; sourceTree = "<group>"; };
 		B94E917C1B5AE92900114A63 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		B94E917D1B5AE92900114A63 /* ShowPhotoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPhotoVC.xib; sourceTree = "<group>"; };
+		B9B184D61B66F8E50076835E /* DAOAuxiliar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOAuxiliar.swift; sourceTree = "<group>"; };
 		B9B485EB1B5DED3500B00F3D /* CoverData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoverData.plist; sourceTree = "<group>"; };
 		B9B485ED1B5E1B0100B00F3D /* FactData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactData.plist; sourceTree = "<group>"; };
 		B9BB5E681B643F4900C3A814 /* RegisterCoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCoverVC.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				B94E91541B5AB74900114A63 /* Family.swift */,
 				B94E91561B5AB75400114A63 /* DAOFamily.swift */,
 				B90BAD071B646742009FB1AD /* Extensions.swift */,
+				B9B184D61B66F8E50076835E /* DAOAuxiliar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				B94E914B1B5AB6E400114A63 /* Cover.swift in Sources */,
 				B94E91721B5AB88800114A63 /* RegisterFactVC.swift in Sources */,
 				B90BAD081B646742009FB1AD /* Extensions.swift in Sources */,
+				B9B184D71B66F8E50076835E /* DAOAuxiliar.swift in Sources */,
 				B94E914F1B5AB70C00114A63 /* Fact.swift in Sources */,
 				B9BB5E691B643F4900C3A814 /* RegisterCoverVC.swift in Sources */,
 				B94E91591B5AB76200114A63 /* Moment.swift in Sources */,
