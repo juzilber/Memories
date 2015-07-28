@@ -17,6 +17,14 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
     var screenSize: CGRect!
     var screenHeight: CGFloat!
     var screenWidht: CGFloat!
+  
+    
+    @IBAction func cancelButton(sender: AnyObject) {
+        var controller: ViewController = ViewController(nibName:"ViewController", bundle:NSBundle.mainBundle())
+        
+        self.presentViewController(controller, animated: false, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +45,11 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
         screenWidht = screenSize.width
         println("height: \(screenHeight) \nwidht: \(screenWidht)")
         configureRowHeight()
+        
+        //desabilita scroll, selection, separator
+        tableView.scrollEnabled = false
+        tableView.allowsSelection = false
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
     }
     
