@@ -93,7 +93,7 @@
         </view>
     </objects>
     <resources>
-        <image name="5C.png" width="1127" height="2000"/>
+        <image name="5C.png" width="3888" height="2592"/>
         <image name="ok2.png" width="1406" height="512"/>
     </resources>
 </document>

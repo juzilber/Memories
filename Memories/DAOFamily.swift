@@ -13,18 +13,172 @@ import UIKit
 private let _daoFamily = DAOFamily()
 
 
-class DAOFamily {
+class DAOFamily : DAOAuxiliar {
     
     class var sharedInstance: DAOFamily {
         
         return _daoFamily
         
-}
-
+    }
+    
     //carregar foto de perfil de familia/amigos
     //carregar descricao
-    //carregar audio 
+    //carregar audio
     
     
-
+    private var contents : NSMutableDictionary!;
+    
+    private let familyPath : String;
+    
+    private let familyPathDoc : String;
+    
+    
+    
+    //inicializa a classe
+    
+    override init(){
+        
+        var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
+        
+        familyPathDoc = documentPath.stringByAppendingPathComponent("Family")
+        
+        familyPath = documentPath.stringByAppendingPathComponent("Family/FamilyData.plist");
+        
+        println(familyPath)
+        
+        let fileManager = NSFileManager.defaultManager();
+        
+        if(fileManager.fileExistsAtPath(familyPathDoc)){
+            
+            contents = NSMutableDictionary(contentsOfFile: familyPath);
+            
+        }
+            
+        else
+            
+        {
+            
+            fileManager.createDirectoryAtPath(familyPathDoc, withIntermediateDirectories: false, attributes: nil, error: nil)
+            
+            
+        }
+        
+    }
+    
+    
+    func loadPlist() ->  NSMutableDictionary?{
+        var pessoas : NSMutableDictionary = contents["pessoas"] as! NSMutableDictionary;
+        return pessoas;
+    }
+    
+    func getDataArray() -> Array<AnyObject>{
+        
+        var res = setUpPessoa();
+        var pessoas : Array = Array <Family>();
+        
+        for (id, _) in res.dict{
+            var pessoa : Family =  getDataById(id) as! Family;
+            pessoas.append(pessoa);
+        }
+        
+        return pessoas;
+    }
+    
+    func getDataById(id: AnyObject) -> AnyObject{
+        
+        var pessoa : Family = Family();
+        
+        var res = setUpPessoa();
+        var pess : NSDictionary = res.dict[id as! String] as! NSDictionary;
+        
+        pessoa.id = (id as! NSString).integerValue;
+        pessoa.photos = pess["imagem"] as! String;
+        pessoa.subtitle = pess["nome"] as! String;
+        pessoa.connection = pess["parentesco"] as? String;
+        
+        if(!(pess["imagem"] as! String).isEmpty){
+            
+            var pImg : String = res.path.stringByAppendingPathComponent(pess["imagem"] as! String);
+            pessoa.photos = pImg;
+            
+        }
+        
+        return pessoa;
+    }
+    
+    func saveData(object : AnyObject){
+        var pessoasDict : NSMutableDictionary = self.loadPlist()!;
+        var pessoaDict : NSMutableDictionary = NSMutableDictionary();
+        
+        var pessoa = object as! Family;
+        
+        var newId : String = ""
+        if(pessoa.id != nil){
+            newId = String(pessoa.id);
+            
+            (contents["pessoas"] as! NSMutableDictionary).removeObjectForKey(String(pessoa.id));
+            contents.writeToFile(familyPath, atomically: true);
+            
+        }
+        else{
+            newId = getFreeIdInDict(pessoasDict);
+        }
+        
+        if(pessoa.photos == nil){
+            pessoaDict.setValue("", forKey: "imagem");
+        }else{
+            pessoaDict.setValue(pessoa.photos, forKey: "imagem");
+        }
+        
+        pessoaDict.setObject(pessoaDict, forKey: newId);
+        contents.setObject(pessoasDict, forKey: "pessoas");
+        contents.writeToFile(familyPath, atomically: true);
+    }
+    
+    
+    
+    func deleteDataById(id: AnyObject) {
+        
+        var imgPath = getPessoasImagePath().stringByAppendingPathComponent(((contents["pessoas"] as! NSDictionary)[String(id as! Int)] as! NSDictionary)["imagem"] as! String);
+        NSFileManager.defaultManager().removeItemAtPath(imgPath, error: nil);
+        (contents["pessoas"] as! NSMutableDictionary).removeObjectForKey(String(id as! Int));
+        contents.writeToFile(familyPath, atomically: true);
+    }
+    
+    func copyImgToDocuments(img : UIImage) -> String{
+        var imgPath : String = getPessoasImagePath();
+        var id = getFreeIdInDict(getImgDictionary());
+        id = id.stringByAppendingFormat(".png");
+        imgPath = imgPath.stringByAppendingPathComponent(id);
+        UIImagePNGRepresentation(img).writeToFile(imgPath, atomically: true);
+        return id;
+    }
+    
+    private func getImgDictionary() -> NSMutableDictionary{
+        var imgPath : String = getPessoasImagePath();
+        var contentsArray : NSArray = NSFileManager.defaultManager().contentsOfDirectoryAtPath(imgPath, error: nil)!;
+        var imgDict:NSMutableDictionary = NSMutableDictionary();
+        for (var id) in contentsArray{
+            let str:String = imgPath.stringByAppendingPathComponent(id as! String);
+            id = id.substringToIndex(count(id as! String) - 4);
+            if let img = UIImage(contentsOfFile: str){
+                imgDict.setObject(img, forKey: id as! String);
+            }
+        }
+        return imgDict;
+    }
+    private func getPessoasImagePath() -> String{
+        
+        var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
+        var imgPath : String = documentPath.stringByAppendingPathComponent("imgPessoa");
+        
+        return imgPath;
+    }
+    
+    private func setUpPessoa() -> (dict: NSMutableDictionary, path: String){
+        var pessoasDict : NSMutableDictionary  = self.loadPList()!;
+        var imgPath : String = getPessoasImagePath();
+        
+        return(pessoasDict, imgPath);
+    }
 }

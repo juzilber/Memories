@@ -209,7 +209,7 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     @IBAction func presentShowFactVC(sender: AnyObject) {
     
-    let sfVC = ShowFactVC(nibName: "ShowFactVC", bundle: nil)
+    let sfVC = ViewController(nibName: "ViewController", bundle: nil)
         presentViewController(sfVC, animated: true, completion: nil)
 
     }
