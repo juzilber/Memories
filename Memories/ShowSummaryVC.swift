@@ -24,9 +24,7 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        rightSwipe.direction = .Right
-        view.addGestureRecognizer(rightSwipe)
+      
 
         // Do any additional setup after loading the view.
     
@@ -210,20 +208,11 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBAction func presentShowFactVC(sender: AnyObject) {
     
     let sfVC = ViewController(nibName: "ViewController", bundle: nil)
+        sfVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
         presentViewController(sfVC, animated: true, completion: nil)
 
     }
     
-    func handleSwipes(sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .Right) {
-            
-            let backVC = CoverVC(nibName: "CoverVC", bundle: nil)
-            
-            backVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            presentViewController(backVC, animated: true, completion: nil)
-            
-        }
-    }
 
     
     

@@ -24,16 +24,6 @@ class CoverVC: UIViewController {
     
     override func viewDidLoad() {
         
-        
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        
-        leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
-        
-        view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
-        
         super.viewDidLoad()
         
         buttonImageCover.setImage(image, forState: .Normal)
@@ -86,28 +76,7 @@ class CoverVC: UIViewController {
     presentViewController(ssVC, animated: true, completion: nil)
     }
     
-  
-    
-    func handleSwipes(sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .Left) {
-            
-            let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
-            
-            ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            presentViewController(ssVC, animated: true, completion: nil)
-           
-        }
-        
-        if (sender.direction == .Right) {
-            println("Swipe Right")
-            
-            var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
-            controller.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            self.presentViewController(controller, animated: true, completion: nil)
-         
-        }
+
     }
 
 
-    
-}
