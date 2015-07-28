@@ -18,6 +18,7 @@
 		614CC11C1B63274B0071763E /* SummaryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */; };
 		614CC11D1B63274B0071763E /* SummaryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614CC11B1B63274B0071763E /* SummaryCollectionCell.xib */; };
 		614CC1211B63362C0071763E /* DAOCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614CC1201B63362C0071763E /* DAOCover.swift */; };
+		7DF6105F1B66F4C3004E096B /* DAOAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6105E1B66F4C3004E096B /* DAOAudio.swift */; };
 		864C627A1B65A7BF0098A94A /* faixaclara.png in Resources */ = {isa = PBXBuildFile; fileRef = 864C62791B65A7BF0098A94A /* faixaclara.png */; };
 		864C627C1B65B39B0098A94A /* faixaazulescura.png in Resources */ = {isa = PBXBuildFile; fileRef = 864C627B1B65B39B0098A94A /* faixaazulescura.png */; };
 		864C627E1B65C1DE0098A94A /* profedit.png in Resources */ = {isa = PBXBuildFile; fileRef = 864C627D1B65C1DE0098A94A /* profedit.png */; };
@@ -97,6 +98,7 @@
 		614CC11A1B63274B0071763E /* SummaryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCollectionCell.swift; sourceTree = "<group>"; };
 		614CC11B1B63274B0071763E /* SummaryCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryCollectionCell.xib; sourceTree = "<group>"; };
 		614CC1201B63362C0071763E /* DAOCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCover.swift; sourceTree = "<group>"; };
+		7DF6105E1B66F4C3004E096B /* DAOAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOAudio.swift; sourceTree = "<group>"; };
 		864C62791B65A7BF0098A94A /* faixaclara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faixaclara.png; sourceTree = "<group>"; };
 		864C627B1B65B39B0098A94A /* faixaazulescura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faixaazulescura.png; sourceTree = "<group>"; };
 		864C627D1B65C1DE0098A94A /* profedit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profedit.png; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				B94E91541B5AB74900114A63 /* Family.swift */,
 				B94E91561B5AB75400114A63 /* DAOFamily.swift */,
 				B90BAD071B646742009FB1AD /* Extensions.swift */,
+				7DF6105E1B66F4C3004E096B /* DAOAudio.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				B94E91661B5AB82D00114A63 /* ShowSummaryVC.swift in Sources */,
 				B94E916A1B5AB85000114A63 /* ShowFactVC.swift in Sources */,
 				60829ED71B61769C007D3629 /* FactCellRightController.swift in Sources */,
+				7DF6105F1B66F4C3004E096B /* DAOAudio.swift in Sources */,
 				B94E91511B5AB71A00114A63 /* DAOFact.swift in Sources */,
 				B94E91281B5AB19F00114A63 /* AppDelegate.swift in Sources */,
 				B9BB5E6F1B643FD900C3A814 /* TutorialVC.swift in Sources */,
