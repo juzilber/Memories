@@ -142,9 +142,6 @@
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQO-pI-n4P">
                     <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                     <color key="onTintColor" red="0.6705882353" green="0.7843137255" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="-25" y="-15" width="44" height="31"/>
-                    </variation>
                 </switch>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nao esqueca de registrar seus melhores momentos" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDP-wP-nBQ">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
