@@ -10,16 +10,9 @@
 import Foundation
 import UIKit
 
-private let _daoFamily = DAOFamily()
-
 
 class DAOFamily : DAOAuxiliar {
     
-    class var sharedInstance: DAOFamily {
-        
-        return _daoFamily
-        
-    }
     
     //carregar foto de perfil de familia/amigos
     //carregar descricao
@@ -32,91 +25,78 @@ class DAOFamily : DAOAuxiliar {
     
     private let familyPathDoc : String;
     
-    
-    
-    //inicializa a classe
-    
     override init(){
         
         var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
-        
+        var imgPath:String = documentPath
         familyPathDoc = documentPath.stringByAppendingPathComponent("Family")
         
         familyPath = documentPath.stringByAppendingPathComponent("Family/FamilyData.plist");
         
         println(familyPath)
-        
-        let fileManager = NSFileManager.defaultManager();
-        
-        if(fileManager.fileExistsAtPath(familyPathDoc)){
-            
-            contents = NSMutableDictionary(contentsOfFile: familyPath);
-            
-        }
-            
-        else
-            
-        {
-            
-            fileManager.createDirectoryAtPath(familyPathDoc, withIntermediateDirectories: false, attributes: nil, error: nil)
-            
-            
-        }
-        
     }
     
-    
-    func loadPlist() ->  NSMutableDictionary?{
+    //inicializa a classe
+
+        
+     func loadPlist() ->  NSMutableDictionary?{
         var pessoas : NSMutableDictionary = contents["pessoas"] as! NSMutableDictionary;
         return pessoas;
     }
     
-    func getDataArray() -> Array<AnyObject>{
+    func getDataArray() -> Array<AnyObject> {
         
         var res = setUpPessoa();
         var pessoas : Array = Array <Family>();
         
-        for (id, _) in res.dict{
-            var pessoa : Family =  getDataById(id) as! Family;
+        for (id, _) in res.dict {
+            var pessoa : Family =  getDataById(id as! String);
             pessoas.append(pessoa);
         }
         
         return pessoas;
     }
     
-    func getDataById(id: AnyObject) -> AnyObject{
+    func getDataById (id: String) -> Family {
         
         var pessoa : Family = Family();
         
         var res = setUpPessoa();
-        var pess : NSDictionary = res.dict[id as! String] as! NSDictionary;
+        var pess: NSDictionary = res.dict[id] as! NSDictionary;
         
-        pessoa.id = (id as! NSString).integerValue;
+        pessoa.id = id.toInt()!;
         pessoa.photos = pess["imagem"] as! String;
         pessoa.subtitle = pess["nome"] as! String;
         pessoa.connection = pess["parentesco"] as? String;
         
-        if(!(pess["imagem"] as! String).isEmpty){
-            
-            var pImg : String = res.path.stringByAppendingPathComponent(pess["imagem"] as! String);
+        if (!(pess["imagem"] as! String).isEmpty) {
+            var pImg: String = res.path.stringByAppendingPathComponent(pess["imagem"] as! String);
             pessoa.photos = pImg;
-            
         }
         
         return pessoa;
     }
     
-    func saveData(object : AnyObject){
+   
+    
+    func saveData(family : Family, img : UIImage){
+<<<<<<< HEAD
+        var pessoasDict : NSMutableDictionary = self.loadPlist()!
+        var pessoaDict : NSMutableDictionary = NSMutableDictionary()
+        
+        var pessoa = family as Family
+=======
         var pessoasDict : NSMutableDictionary = self.loadPlist()!;
         var pessoaDict : NSMutableDictionary = NSMutableDictionary();
         
-        var pessoa = object as! Family;
+        var pessoa = family as Family;
+>>>>>>> origin/master
         
         var newId : String = ""
         if(pessoa.id != nil){
-            newId = String(pessoa.id);
+            newId = String(pessoa.id!)
             
-            (contents["pessoas"] as! NSMutableDictionary).removeObjectForKey(String(pessoa.id));
+            (contents["pessoas"] as! NSMutableDictionary).removeObjectForKey(String(pessoa.id!))
             contents.writeToFile(familyPath, atomically: true);
             
         }

@@ -178,7 +178,7 @@ class DAOFact {
         return photos;
     }
     
-    func saveNewFact(fact : Fact, imgs : [UIImage], audio : AVAudioPlayer){
+    func saveNewFact(fact : Fact, imgs : [UIImage], audio : String){
         //salvando o fact (foto+legenda+audio)
         //        let photosStrings = saveDataImgToPath(imgs);
         //        fact.photo = photosStrings;

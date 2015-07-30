@@ -24,20 +24,18 @@ class CoverVC: UIViewController {
     
     override func viewDidLoad() {
         
-        
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        
-        leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
-        
-        view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
-        
         super.viewDidLoad()
         
         buttonImageCover.setImage(image, forState: .Normal)
 
+        
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
         var daoCover = DAOCover()
         let myCover = daoCover.getData();
         if(myCover != nil){
@@ -48,7 +46,7 @@ class CoverVC: UIViewController {
             imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile)
             image = UIImage(contentsOfFile: myCover!.imageBackground);
             buttonImageCover.setImage(image, forState: .Normal);
-
+            
             
         } else {
             println("salvou nada")
@@ -61,10 +59,30 @@ class CoverVC: UIViewController {
         imageProfile.layer.borderColor = UIColor.clearColor().CGColor
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
         imageProfile.clipsToBounds = true
+        
 
         
         
+        if NSUserDefaults.standardUserDefaults().boolForKey("hasLaunchedOnce") {
+            //app has already launched before
+            
+            println("foi Cover")
+        
+        
+        
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            //first time launch of tutorial VC, programattically
+            var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
+        
+            presentViewController(registerCoverVC, animated: true, completion: nil)
+        }
+
+    
     }
+    
+    
     
     //botao edit que leva pra RegisterCoverVC
     @IBAction func editCover(sender: AnyObject) {
@@ -82,32 +100,11 @@ class CoverVC: UIViewController {
         
         let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
     
-        ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        
     presentViewController(ssVC, animated: true, completion: nil)
     }
     
-  
-    
-    func handleSwipes(sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .Left) {
-            
-            let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
-            
-            ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            presentViewController(ssVC, animated: true, completion: nil)
-           
-        }
-        
-        if (sender.direction == .Right) {
-            println("Swipe Right")
-            
-            var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
-            controller.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-            self.presentViewController(controller, animated: true, completion: nil)
-         
-        }
+
     }
 
 
-    
-}
