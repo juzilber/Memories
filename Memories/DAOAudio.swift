@@ -11,7 +11,11 @@ import Foundation
 class DAOAudio: NSObject {
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     class func createAudioGame(gameTitle: String) {
+=======
+    class func createAudio(gameTitle: String) {
+>>>>>>> origin/master
 =======
     class func createAudio(gameTitle: String) {
 >>>>>>> origin/master
@@ -21,6 +25,7 @@ class DAOAudio: NSObject {
         let path : String = getPlistPath(rootPath)
         
         //abrir o arquivo e carregar a plist
+<<<<<<< HEAD
 <<<<<<< HEAD
         var audioGameArray : NSMutableArray! = NSMutableArray(contentsOfFile: path)
         
@@ -51,6 +56,8 @@ class DAOAudio: NSObject {
         audioGameArray.addObject(audioGameDict)
         audioGameArray.writeToFile(path, atomically: false)
 =======
+=======
+>>>>>>> origin/master
         var audioArray : NSMutableArray! = NSMutableArray(contentsOfFile: path)
         
         //chave identificadora do audio
@@ -79,6 +86,9 @@ class DAOAudio: NSObject {
         }
         audioArray.addObject(audioDict)
         audioArray.writeToFile(path, atomically: false)
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         let fileManager = NSFileManager.defaultManager()
         fileManager.copyItemAtPath(rootPath.stringByAppendingPathComponent("temp.caf"), toPath: rootPath.stringByAppendingPathComponent(audioName), error: nil)
@@ -92,6 +102,10 @@ class DAOAudio: NSObject {
         var path:NSString = rootPath.stringByAppendingPathComponent("DaoAudio.plist")
         var fileManager = NSFileManager.defaultManager()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/master
 =======
         
 >>>>>>> origin/master
@@ -100,6 +114,7 @@ class DAOAudio: NSObject {
             var sourcePath: String = NSBundle.mainBundle().pathForResource("DaoAudio", ofType: "plist")!;
             fileManager.copyItemAtPath(sourcePath, toPath: path as String, error: nil)
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         var audioGameArray : NSMutableArray! = NSMutableArray(contentsOfFile: path as String)
         let audioGameDict : NSDictionary = audioGameArray[index] as! NSDictionary
@@ -128,6 +143,8 @@ class DAOAudio: NSObject {
         }
         return audioGames
 =======
+=======
+>>>>>>> origin/master
         var audioArray : NSMutableArray! = NSMutableArray(contentsOfFile: path as String)
         let audioDict : NSDictionary = audioArray[index] as! NSDictionary
         let audioName : String = audioDict.valueForKey("audioName") as! String
@@ -155,6 +172,9 @@ class DAOAudio: NSObject {
             //antes: DAOAudio(title, audioName: audioName))
         }
         return audios
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     }
     
@@ -163,6 +183,10 @@ class DAOAudio: NSObject {
         var path: String = rootPath.stringByAppendingPathComponent("DaoAudio.plist")
         var fileManager = NSFileManager.defaultManager()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/master
 =======
         
 >>>>>>> origin/master

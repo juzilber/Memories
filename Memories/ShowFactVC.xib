@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -7,6 +8,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+>>>>>>> origin/master
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
 >>>>>>> origin/master
     </dependencies>
@@ -19,7 +25,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowFactVC" customModule="Memories" customModuleProvider="target">
             <connections>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <outlet property="editButton" destination="dgr-HW-w6g" id="MAN-rg-c7U"/>
+=======
+                <outlet property="editButton" destination="3yi-bh-EYy" id="u78-Rn-UP6"/>
+>>>>>>> origin/master
 =======
                 <outlet property="editButton" destination="3yi-bh-EYy" id="u78-Rn-UP6"/>
 >>>>>>> origin/master
@@ -56,6 +66,7 @@
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgr-HW-w6g">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
@@ -79,6 +90,8 @@
                     <connections>
                         <action selector="editFacts:" destination="-1" eventType="touchUpInside" id="qCv-Jq-9rR"/>
 =======
+=======
+>>>>>>> origin/master
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yi-bh-EYy">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="EDITAR">
@@ -87,6 +100,9 @@
                     </state>
                     <connections>
                         <action selector="editFacts:" destination="-1" eventType="touchUpInside" id="yhC-0F-z1p"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                     </connections>
                 </button>
@@ -134,6 +150,7 @@
                 <mask key="subviews">
                     <exclude reference="BLT-4D-agJ"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <exclude reference="9rM-5K-kbD"/>
                     <exclude reference="Pca-J1-JGY"/>
                     <exclude reference="dgr-HW-w6g"/>
@@ -154,6 +171,8 @@
                     <exclude reference="GFF-1R-VzC"/>
                     <exclude reference="Uto-Gg-EW1"/>
 =======
+=======
+>>>>>>> origin/master
                     <exclude reference="3yi-bh-EYy"/>
                 </mask>
                 <mask key="constraints">
@@ -212,6 +231,9 @@
                 <mask key="constraints">
                     <include reference="8d9-BR-b67"/>
                     <include reference="ff8-ce-Nro"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                 </mask>
             </variation>

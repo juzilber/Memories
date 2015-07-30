@@ -186,6 +186,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPl-DI-mQj">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="elw-EP-yNX"/>
                     </constraints>
@@ -202,11 +203,16 @@
                             <include reference="elw-EP-yNX"/>
                         </mask>
 =======
+=======
+>>>>>>> origin/master
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="18" y="473" width="65" height="21"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                     </variation>
                 </label>
@@ -286,6 +292,7 @@
                     <exclude reference="seE-Xc-AT6"/>
                     <exclude reference="G5S-Kb-79F"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <exclude reference="7is-s0-UrQ"/>
                     <exclude reference="2Jh-bN-zLW"/>
                     <exclude reference="GPC-Vc-MU1"/>
@@ -332,6 +339,9 @@
 =======
                     <exclude reference="BPl-DI-mQj"/>
 >>>>>>> origin/master
+=======
+                    <exclude reference="BPl-DI-mQj"/>
+>>>>>>> origin/master
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -343,6 +353,7 @@
                     <include reference="CkS-KS-zKU"/>
                     <include reference="seE-Xc-AT6"/>
                     <include reference="G5S-Kb-79F"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <include reference="7is-s0-UrQ"/>
                     <include reference="2Jh-bN-zLW"/>
@@ -387,6 +398,9 @@
                     <include reference="mS7-FF-PsW"/>
                     <include reference="aew-XH-YfI"/>
                     <include reference="yOe-3l-NBQ"/>
+=======
+                    <include reference="BPl-DI-mQj"/>
+>>>>>>> origin/master
 =======
                     <include reference="BPl-DI-mQj"/>
 >>>>>>> origin/master

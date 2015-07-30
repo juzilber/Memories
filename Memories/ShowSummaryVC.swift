@@ -259,11 +259,15 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     let sfVC = ViewController(nibName: "ViewController", bundle: nil)
         sfVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         presentViewController(sfVC, animated: true, completion: nil)
 
             }
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -281,6 +285,8 @@ class ShowSummaryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
 //            
 //        }
 //    }
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 

@@ -47,17 +47,23 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
         configureRowHeight()
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Desabilita scroll, selection, separator
         tableView.scrollEnabled = false
         tableView.allowsSelection = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     
 =======
+=======
+>>>>>>> origin/master
         //desabilita scroll, selection, separator
         tableView.scrollEnabled = false
         tableView.allowsSelection = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     }
     

@@ -81,15 +81,21 @@ class DAOFamily : DAOAuxiliar {
     
     func saveData(family : Family, img : UIImage){
 <<<<<<< HEAD
+<<<<<<< HEAD
         var pessoasDict : NSMutableDictionary = self.loadPlist()!
         var pessoaDict : NSMutableDictionary = NSMutableDictionary()
         
         var pessoa = family as Family
 =======
+=======
+>>>>>>> origin/master
         var pessoasDict : NSMutableDictionary = self.loadPlist()!;
         var pessoaDict : NSMutableDictionary = NSMutableDictionary();
         
         var pessoa = family as Family;
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         
         var newId : String = ""
