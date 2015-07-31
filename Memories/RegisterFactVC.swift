@@ -46,25 +46,11 @@ class RegisterFactVC: UIViewController, UITableViewDataSource, UITableViewDelega
         println("height: \(screenHeight) \nwidht: \(screenWidht)")
         configureRowHeight()
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-        //Desabilita scroll, selection, separator
-        tableView.scrollEnabled = false
-        tableView.allowsSelection = false
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-    
-=======
-=======
->>>>>>> origin/master
         //desabilita scroll, selection, separator
         tableView.scrollEnabled = false
         tableView.allowsSelection = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
     }
     
     //Define 3 células por página

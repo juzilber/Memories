@@ -9,10 +9,6 @@
 import UIKit
 
 class ShowFactFamilyVC: UIViewController {
-    @IBOutlet var familyImgView: UIImageView!
-    @IBOutlet var nameLbl: UILabel!
-    @IBOutlet var connectionLbl: UILabel!
-    @IBOutlet var playBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

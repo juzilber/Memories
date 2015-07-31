@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegFactCellLeftController: UITableViewCell, UITextFieldDelegate {
+class RegFactCellLeftController: UITableViewCell {
 
     
     @IBOutlet var photoView: UIImageView!
@@ -32,19 +32,9 @@ class RegFactCellLeftController: UITableViewCell, UITextFieldDelegate {
         datePicker.text = dateFormatter.stringFromDate(sender.date)
     }
     
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.datePicker.endEditing(true)
-        return false
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-   
-        datePicker.delegate = self
-    
-    
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

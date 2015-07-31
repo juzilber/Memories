@@ -92,7 +92,7 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Define a altura de cada célula
     func configureRowHeight() {
-        tableView.rowHeight = screenHeight/3 - 23
+        tableView.rowHeight = screenHeight/3 - 18
         println(" rowHeight: \(tableView.rowHeight)")
     }
     

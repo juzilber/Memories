@@ -137,60 +137,25 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    
-        recorder = nil
-        player = nil
-    
     }
     
 
     @IBAction func buttonSave(sender: AnyObject) {
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-        var familyF: Family = Family()
-        
-        familyF.connection = connetionTxt.text
-        familyF.subtitle = nameTxt.text
-=======
-=======
->>>>>>> origin/master
         var family: Family = Family()
         
         family.connection = connetionTxt.text
         family.subtitle = nameTxt.text
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
         
         var daoFamily = DAOFamily()
         
 //        daoFamily.getDataById(family, id: )
-<<<<<<< HEAD
-<<<<<<< HEAD
-        daoFamily.getDataArray()
-        //daoFamily.getDataById(<#id: String#>)
-        daoFamily.saveData(familyF, img: familyImg.image!)
-        
-        //, photos: familyImg.image!)
-        //daoFamily.getDataById(id: )
-        
-//        let summaryVC = ShowSummaryVC(nibName: "ShowSummaryC", bundle: nil)
-//        presentViewController(ShowSummaryVC(), animated: true, completion: nil)
-=======
-=======
->>>>>>> origin/master
 //        daoFamily.saveData(family, photo: )
         
         //, photos: familyImg.image!)
         
         let summaryVC = ShowSummaryVC(nibName: "ShowSummaryC", bundle: nil)
         presentViewController(ShowSummaryVC(), animated: true, completion: nil)
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
         
     }
 
@@ -214,8 +179,6 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
         if recorder == nil {
             println("recording. recorder nil")
             recordBtn.setTitle("Pause", forState:.Normal)
-<<<<<<< HEAD
-<<<<<<< HEAD
             playBtn.enabled = false
             stopBtn.enabled = true
             recordWithPermission(true)
@@ -232,42 +195,6 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
             recordBtn.setTitle("Pause", forState:.Normal)
             playBtn.enabled = false
             stopBtn.enabled = true
-=======
-            playBtn.enabled = false
-            stopBtn.enabled = true
-            recordWithPermission(true)
-            return
-        }
-        
-        if recorder != nil && recorder.recording {
-            println("pausing")
-            recorder.pause()
-            recordBtn.setTitle("Continue", forState:.Normal)
-            
-        } else {
-            println("recording")
-            recordBtn.setTitle("Pause", forState:.Normal)
-            playBtn.enabled = false
-            stopBtn.enabled = true
->>>>>>> origin/master
-=======
-            playBtn.enabled = false
-            stopBtn.enabled = true
-            recordWithPermission(true)
-            return
-        }
-        
-        if recorder != nil && recorder.recording {
-            println("pausing")
-            recorder.pause()
-            recordBtn.setTitle("Continue", forState:.Normal)
-            
-        } else {
-            println("recording")
-            recordBtn.setTitle("Pause", forState:.Normal)
-            playBtn.enabled = false
-            stopBtn.enabled = true
->>>>>>> origin/master
             //            recorder.record()
             recordWithPermission(false)
         }
@@ -302,30 +229,6 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
     }
     
     func play() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-        
-        println("playing")
-        var error: NSError?
-        
-        if let r = recorder {
-            self.player = AVAudioPlayer(contentsOfURL: r.url, error: &error)
-            if self.player == nil {
-                if let e = error {
-                    println(e.localizedDescription)
-                }
-            }
-        }
-        
-        stopBtn.enabled = true
-        
-        player.delegate = self
-        player.prepareToPlay()
-<<<<<<< HEAD
-        player.volume = 7.0
-=======
         
         println("playing")
         var error: NSError?
@@ -344,10 +247,6 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
         player.delegate = self
         player.prepareToPlay()
         player.volume = 6.0
->>>>>>> origin/master
-=======
-        player.volume = 6.0
->>>>>>> origin/master
         player.play()
     }
 
@@ -453,52 +352,11 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
     func foreground(notification:NSNotification) {
         println("foreground")
     }
-<<<<<<< HEAD
 
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
 
-=======
->>>>>>> origin/master
 
-<<<<<<< HEAD
-// MARK: AVAudioRecorderDelegate
-extension RegisterFamilyVC : AVAudioRecorderDelegate {
-    
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!,
-        successfully flag: Bool) {
-            println("finished recording \(flag)")
-            stopBtn.enabled = false
-            playBtn.enabled = true
-            recordBtn.setTitle("Record", forState:.Normal)
-            
-            // iOS8 and later
-            var alert = UIAlertController(title: "Recorder",
-                message: "Finished Recording",
-                preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Keep", style: .Default, handler: {action in
-                println("keep was tapped")
-            }))
-            alert.addAction(UIAlertAction(title: "Delete", style: .Default, handler: {action in
-                println("delete was tapped")
-                self.recorder.deleteRecording()
-            }))
-            self.presentViewController(alert, animated:true, completion:nil)
-    }
-    
-    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!,
-        error: NSError!) {
-            println("\(error.localizedDescription)")
-    }
-=======
->>>>>>> origin/master
-}
-
-<<<<<<< HEAD
-=======
 // MARK: AVAudioRecorderDelegate
 extension RegisterFamilyVC : AVAudioRecorderDelegate {
     
@@ -529,40 +387,6 @@ extension RegisterFamilyVC : AVAudioRecorderDelegate {
     }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
-// MARK: AVAudioRecorderDelegate
-extension RegisterFamilyVC : AVAudioRecorderDelegate {
-    
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!,
-        successfully flag: Bool) {
-            println("finished recording \(flag)")
-            stopBtn.enabled = false
-            playBtn.enabled = true
-            recordBtn.setTitle("Record", forState:.Normal)
-            
-            // iOS8 and later
-            var alert = UIAlertController(title: "Recorder",
-                message: "Finished Recording",
-                preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Keep", style: .Default, handler: {action in
-                println("keep was tapped")
-            }))
-            alert.addAction(UIAlertAction(title: "Delete", style: .Default, handler: {action in
-                println("delete was tapped")
-                self.recorder.deleteRecording()
-            }))
-            self.presentViewController(alert, animated:true, completion:nil)
-    }
-    
-    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!,
-        error: NSError!) {
-            println("\(error.localizedDescription)")
-    }
-}
-
->>>>>>> origin/master
 // MARK: AVAudioPlayerDelegate
 extension RegisterFamilyVC : AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {

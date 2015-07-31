@@ -2,14 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Comme-Medium.ttf">
             <string>Comme-Medium</string>
-        </mutableArray>
-        <mutableArray key="Lavanderia Regular.otf">
-            <string>Lavanderia-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -21,65 +17,33 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PpA-89-aor" id="spD-mP-nTU">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-fW-nE1">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-fW-nE1">
                         <rect key="frame" x="8" y="12" width="220" height="180"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="180" id="2mN-bJ-0Id"/>
-                            <constraint firstAttribute="width" constant="220" id="g3h-lS-1sz"/>
-                        </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-Dy-yYi">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-Dy-yYi">
                         <rect key="frame" x="236" y="38" width="150" height="128"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="150" id="JBa-oe-IJr"/>
-                            <constraint firstAttribute="height" constant="128" id="oht-Bq-ZWc"/>
-                        </constraints>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="Comme-Medium" family="Comme" pointSize="16"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" background="barraamarela.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-X0-gTC">
-                        <rect key="frame" x="239" y="12" width="147" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="147" id="HbV-nK-fOe"/>
-                            <constraint firstAttribute="height" constant="30" id="Lb3-vL-sAz"/>
-                        </constraints>
-                        <color key="textColor" red="0.25490196079999999" green="0.31372549020000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" name="Lavanderia-Regular" family="Lavanderia" pointSize="30"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-X0-gTC">
+                        <rect key="frame" x="239" y="12" width="143" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
                             <action selector="textFieldEditing:" destination="PpA-89-aor" eventType="editingDidBegin" id="Vwh-9V-jfd"/>
                         </connections>
                     </textField>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-QL-DbJ">
-                        <rect key="frame" x="337" y="157" width="35" height="35"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="35" id="ePt-Uy-kkT"/>
-                            <constraint firstAttribute="width" constant="35" id="mk8-ji-sz0"/>
-                        </constraints>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-QL-DbJ">
+                        <rect key="frame" x="348" y="157" width="35" height="35"/>
                         <state key="normal" image="microclaro.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="0.6705882353" green="0.7843137255" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="S3v-Dy-yYi" secondAttribute="bottom" constant="29" id="269-RY-CKm"/>
-                    <constraint firstItem="S3v-Dy-yYi" firstAttribute="leading" secondItem="5PG-fW-nE1" secondAttribute="trailing" constant="8" id="Np7-sQ-kRP"/>
-                    <constraint firstItem="6Nx-X0-gTC" firstAttribute="leading" secondItem="5PG-fW-nE1" secondAttribute="trailing" constant="11" id="Spc-J4-n06"/>
-                    <constraint firstItem="S3v-Dy-yYi" firstAttribute="leading" secondItem="5PG-fW-nE1" secondAttribute="trailing" constant="8" id="axX-9k-d7s"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="A6t-QL-DbJ" secondAttribute="trailing" constant="13" id="egG-Ar-gHr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="S3v-Dy-yYi" secondAttribute="trailing" constant="6" id="fKO-3a-QcD"/>
-                    <constraint firstItem="5PG-fW-nE1" firstAttribute="top" secondItem="spD-mP-nTU" secondAttribute="topMargin" constant="4" id="nuY-JQ-pbt"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="5PG-fW-nE1" secondAttribute="bottom" constant="3" id="o0P-LB-jKI"/>
-                    <constraint firstItem="5PG-fW-nE1" firstAttribute="leading" secondItem="spD-mP-nTU" secondAttribute="leadingMargin" id="oGi-j2-waS"/>
-                    <constraint firstItem="A6t-QL-DbJ" firstAttribute="bottom" secondItem="5PG-fW-nE1" secondAttribute="bottom" id="pfx-Dq-itZ"/>
-                    <constraint firstItem="6Nx-X0-gTC" firstAttribute="top" secondItem="spD-mP-nTU" secondAttribute="topMargin" constant="4" id="poK-Ur-FmX"/>
-                    <constraint firstItem="S3v-Dy-yYi" firstAttribute="top" secondItem="spD-mP-nTU" secondAttribute="topMargin" constant="30" id="r45-pQ-HfL"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="6Nx-X0-gTC" secondAttribute="trailing" constant="6" id="zOk-2j-vl8"/>
-                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="audioButton" destination="A6t-QL-DbJ" id="NgW-2W-CaI"/>
@@ -91,7 +55,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="barraamarela.png" width="3056" height="512"/>
         <image name="microclaro.png" width="512" height="512"/>
     </resources>
 </document>
