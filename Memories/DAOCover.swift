@@ -44,8 +44,7 @@ class DAOCover {
             
             contents = NSMutableDictionary(contentsOfFile: coverPath);
             if( contents == nil ){
-                contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
-                contents.writeToFile(coverPath, atomically: true);
+                createDict()
             }
         }
         else

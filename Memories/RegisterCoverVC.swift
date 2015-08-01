@@ -65,13 +65,13 @@ class RegisterCoverVC:UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         
-//        var daoCover = DAOCover()
-//        let myCover = daoCover.getData();
-//        if(myCover != nil){
-//            textFieldTitle.text = myCover?.title;
-//            textFieldName.text = myCover?.name;
-//            imageView.image = UIImage(contentsOfFile: myCover!.imageProfile);
-//        }
+        var daoCover = DAOCover()
+        let myCover = daoCover.getData();
+        if(myCover != nil){
+            textFieldTitle.text = myCover?.title;
+            textFieldName.text = myCover?.name;
+            imageView.image = UIImage(contentsOfFile: myCover!.imageProfile);
+        }
         
     }
     
