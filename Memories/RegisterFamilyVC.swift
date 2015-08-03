@@ -146,7 +146,6 @@ class RegisterFamilyVC: UIViewController, UIImagePickerControllerDelegate, UITex
         
         family.connection = connetionTxt.text
         family.subtitle = nameTxt.text
-        
         var daoFamily = DAOFamily()
         
 //        daoFamily.getDataById(family, id: )
