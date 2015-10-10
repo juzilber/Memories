@@ -16,20 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        var type = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound;
-        var setting = UIUserNotificationSettings(forTypes: type, categories: nil);
-        UIApplication.sharedApplication().registerUserNotificationSettings(setting);
-        UIApplication.sharedApplication().registerForRemoteNotifications();
+//        var type = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound;
+//        var setting = UIUserNotificationSettings(forTypes: type, categories: nil);
+//        UIApplication.sharedApplication().registerUserNotificationSettings(setting);
+//        UIApplication.sharedApplication().registerForRemoteNotifications();
         
         
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
   
         //Definir Root View Controller
-        var registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
-        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
-        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
-        var viewController: ViewController = ViewController(nibName:"ViewController", bundle: nil)
+        let registerCoverVC: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle: nil)
+//        var showFactVC: ShowFactVC = ShowFactVC(nibName:"ShowFactVC", bundle: nil)
+//        var registerFactVC: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle: nil)
         window?.rootViewController = registerCoverVC
 
         
@@ -47,31 +46,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let cal = NSCalendar.currentCalendar()
-        let datefor = NSDate()
-        let components = NSDateComponents()
-        let comp = cal.components(.MonthCalendarUnit | .DayCalendarUnit | .YearCalendarUnit, fromDate: datefor)
-        
-        
-        components.year = comp.year
-        components.month = comp.month
-        components.day = comp.day
-        components.hour = 17
-        components.minute = 00
-        components.second = 00
-        let date: NSDate = calendar.dateFromComponents(components)!
-        
-        let nextDate: NSDateComponents = NSDateComponents()
-        nextDate.minute = 1
-        let fireDateNotification: NSDate = cal.dateByAddingComponents(nextDate, toDate: date, options: NSCalendarOptions(0))!
-        
-        
-        var localNotification: UILocalNotification = UILocalNotification()
-        localNotification.alertAction = "Entrar no App"
-        localNotification.alertBody = "Volte e registre seus melhores momentos"
-        localNotification.fireDate = fireDateNotification
-        localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
+//        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+//        let cal = NSCalendar.currentCalendar()
+//        let datefor = NSDate()
+//        let components = NSDateComponents()
+//        let comp = cal.components(.MonthCalendarUnit | .DayCalendarUnit | .YearCalendarUnit, fromDate: datefor)
+//        
+//        
+//        components.year = comp.year
+//        components.month = comp.month
+//        components.day = comp.day
+//        components.hour = 17
+//        components.minute = 00
+//        components.second = 00
+//        let date: NSDate = calendar.dateFromComponents(components)!
+//        
+//        let nextDate: NSDateComponents = NSDateComponents()
+//        nextDate.minute = 1
+//        let fireDateNotification: NSDate = cal.dateByAddingComponents(nextDate, toDate: date, options: NSCalendarOptions(rawValue: 0))!
+//        
+//        
+//        var localNotification: UILocalNotification = UILocalNotification()
+//        localNotification.alertAction = "Entrar no App"
+//        localNotification.alertBody = "Volte e registre seus melhores momentos"
+//        localNotification.fireDate = fireDateNotification
+//        localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

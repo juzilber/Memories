@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Memories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B94E91361B5AB19F00114A63"
-               BuildableName = "MemoriesTests.xctest"
-               BlueprintName = "MemoriesTests"
-               ReferencedContainer = "container:Memories.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

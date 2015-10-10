@@ -25,9 +25,6 @@
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="15" y="18" width="52" height="30"/>
                     </variation>
-                    <connections>
-                        <action selector="cancelButton:" destination="-1" eventType="touchUpInside" id="XMe-qC-SaD"/>
-                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-qa-idX">
                     <rect key="frame" x="0.0" y="54" width="600" height="546"/>

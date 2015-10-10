@@ -13,7 +13,7 @@ class SummaryCollectionCell: UICollectionViewCell {
     @IBOutlet var summaryImgCell: UIImageView!
     @IBOutlet var descriptionLbl: UILabel!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
     }

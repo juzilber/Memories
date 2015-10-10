@@ -11,5 +11,5 @@ import UIKit
 class Fact: Moment {
     
     var date:NSDate?
-    var photos:[String] = [String]()
+    
 }

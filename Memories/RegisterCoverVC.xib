@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Comme-Medium.ttf">
@@ -55,6 +55,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileedit.png" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-2m-PfM">
+                    <rect key="frame" x="225" y="71" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="0aX-1v-lHv"/>
+                        <constraint firstAttribute="width" constant="150" id="OPs-Ng-TjK"/>
+                        <constraint firstAttribute="height" constant="150" id="mlh-0E-RMP"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mlh-0E-RMP"/>
+                        </mask>
+                    </variation>
+                </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor(a)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NW1-wo-buS" userLabel="Text Field Nome">
                     <rect key="frame" x="200" y="489" width="200" height="30"/>
                     <constraints>
@@ -70,7 +83,7 @@
                         <constraint firstAttribute="height" constant="59" id="hP5-96-CZc"/>
                         <constraint firstAttribute="width" constant="184" id="heK-85-dTf"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Lavanderia-Regular" family="Lavanderia" pointSize="33"/>
+                    <fontDescription key="fontDescription" name="Lavanderia-Regular" family="Lavanderia" pointSize="47"/>
                     <color key="textColor" red="0.25490196079999999" green="0.31372549020000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -138,19 +151,6 @@
                         <action selector="cancelRegistration:" destination="-1" eventType="touchUpInside" id="qpC-X2-6v5"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileedit.png" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-2m-PfM">
-                    <rect key="frame" x="225" y="71" width="150" height="150"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="0aX-1v-lHv"/>
-                        <constraint firstAttribute="width" constant="150" id="OPs-Ng-TjK"/>
-                        <constraint firstAttribute="height" constant="150" id="mlh-0E-RMP"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="mlh-0E-RMP"/>
-                        </mask>
-                    </variation>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

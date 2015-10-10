@@ -25,38 +25,41 @@ class DAOCover {
     //load plist, testar, save, excluir, edit
     
     private var contents : NSMutableDictionary!;
-    private let coverPath : String; //pasta Cover
-    private let coverPathDoc : String; //acesso ao arquivo da pasta Cover
+    private let coverPath : String;
+    private let coverPathDoc : String;
     
     //inicializa a classe
     init(){
-        var documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String;
-        
+        let documentPath : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] ;
         coverPathDoc = documentPath.stringByAppendingPathComponent("Cover")
         coverPath = documentPath.stringByAppendingPathComponent("Cover/CoverData.plist");
-        
-        println(coverPath)
-        println(coverPathDoc)
-        
+        print(coverPath)
+        print(coverPathDoc)
         let fileManager = NSFileManager.defaultManager();
         
         if(fileManager.fileExistsAtPath(coverPathDoc)){
-            
+            print("oi")
             contents = NSMutableDictionary(contentsOfFile: coverPath);
             if( contents == nil ){
-                createDict()
+                contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
+                contents.writeToFile(coverPath, atomically: true);
             }
         }
         else
         {
-            fileManager.createDirectoryAtPath(coverPathDoc, withIntermediateDirectories: false, attributes: nil, error: nil)
+            do{
+                try fileManager.createDirectoryAtPath(coverPathDoc, withIntermediateDirectories: false, attributes: nil)
+            }
+            catch{
+                print("Erro creating directory");
+            }
             createDict()
         }
         
     }
     
     private func createDict(){
-        println("entrou!")
+        print("entrou!")
         contents = NSMutableDictionary(objects: ["",""], forKeys: ["name", "title"]);
         contents.writeToFile(coverPath, atomically: true);
         
@@ -65,7 +68,7 @@ class DAOCover {
     func getData() -> Cover?{
         
         //instanciando a classe Cover(passando informacoes da classe para a plist)
-        var cover = Cover()
+        let cover = Cover()
         if(contents == nil){
             return nil
         }
@@ -100,12 +103,18 @@ class DAOCover {
     //funcao para deletar imagem
     private func deleteImg(name: String){
         let fileManager = NSFileManager.defaultManager();
-        fileManager.removeItemAtPath(coverPathDoc+"/"+name, error: nil)
+        let str = coverPathDoc+"/"+name;
+        do{
+            try fileManager.removeItemAtPath(str)
+        }
+        catch{
+            print("Error removing file at " + str);
+        }
     }
     
     //funcao pra salvar as imagens
     private func saveDataImgToPath(img : UIImage, name : String){
-        UIImagePNGRepresentation(img).writeToFile(coverPathDoc+"/"+name, atomically: true);
+        UIImagePNGRepresentation(img)!.writeToFile(coverPathDoc+"/"+name, atomically: true);
         
     }
 }

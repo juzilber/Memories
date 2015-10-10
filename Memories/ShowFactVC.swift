@@ -10,7 +10,6 @@ import UIKit
 
 class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet var editButton: UIButton!
     @IBOutlet var tableView: UITableView!
     
@@ -18,41 +17,27 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var screenHeight: CGFloat!
     var screenWidht: CGFloat!
     
-    //THIS
-    var pageIndex: Int!
-    var id:Int!
-
-    @IBAction func editFacts(sender: AnyObject) {
-        var controller: RegisterFactVC = RegisterFactVC(nibName:"RegisterFactVC", bundle:NSBundle.mainBundle())
-        
-        self.presentViewController(controller, animated: false, completion: nil)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Registra as duas células diferentes
-        var cellLeft = UINib(nibName: "FactCellLeft", bundle: nil)
+        let cellLeft = UINib(nibName: "FactCellLeft", bundle: nil)
         tableView.registerNib(cellLeft, forCellReuseIdentifier: "CellLeft")
         
-        var cellRight = UINib(nibName: "FactCellRight", bundle: nil)
+        let cellRight = UINib(nibName: "FactCellRight", bundle: nil)
         tableView.registerNib(cellRight, forCellReuseIdentifier: "CellRight")
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.scrollEnabled = false
-        tableView.allowsSelection = false
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         //Calcula a altura da tela para definir a altura de cada célula
         screenSize = UIScreen.mainScreen().bounds
         screenHeight = screenSize.height
         screenWidht = screenSize.width
-        println("height: \(screenHeight) \nwidht: \(screenWidht)")
+        print("height: \(screenHeight) \nwidht: \(screenWidht)")
         configureRowHeight()
-            }
-
+        
+    }
     
     //Define 3 células por página
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -63,37 +48,35 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //Carrega as informações em cada célula e define que as de número par ficam na direita, as de número ímpar na esquerda
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        //índice de 0 a n que indica a posição da célula em relação a todas as outras
-        id = indexPath.row + (pageIndex*3)
-        
-        if id % 2 == 0 {
+        if indexPath.row % 2 == 0 {
             var cell:FactCellRightController!
             cell = tableView.dequeueReusableCellWithIdentifier("CellRight", forIndexPath: indexPath) as! FactCellRightController
             
             cell.dateLabel.text = "0 dez 00"
             cell.subtitleLabel.text = "show do criolo na fundicao progresso um sucesso eta homem bom"
-            var photo:UIImage = UIImage(named: "\(id)")!
-            println("right\(id)")
+            let photo:UIImage = UIImage(named: "imageB")!
             cell.photoView.image = photo
             
             return cell
         } else {
             var cell:FactCellLeftController!
             cell = tableView.dequeueReusableCellWithIdentifier("CellLeft", forIndexPath: indexPath) as! FactCellLeftController
+            
             cell.dateLabel.text = "0 jan 00"
             cell.subtitleLabel.text = "meu primo henrique olha como o sorriso dele é bonito ele é tao feliz"
-            var photo:UIImage = UIImage(named: "\(id)")!
+            let photo:UIImage = UIImage(named: "imageB")!
             cell.photoView.image = photo
-    
+            
             return cell
         }
+        
+        
     }
-    
     
     //Define a altura de cada célula
     func configureRowHeight() {
         tableView.rowHeight = screenHeight/3 - 18
-        println(" rowHeight: \(tableView.rowHeight)")
+        print(" rowHeight: \(tableView.rowHeight)")
     }
     
     
@@ -101,5 +84,6 @@ class ShowFactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         
     }
+    
     
 }

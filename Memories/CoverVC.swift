@@ -9,8 +9,6 @@
 import UIKit
 
 class CoverVC: UIViewController {
-    
-
 
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelName: UILabel!
@@ -28,11 +26,11 @@ class CoverVC: UIViewController {
         
         buttonImageCover.setImage(image, forState: .Normal)
 
-        var daoCover = DAOCover()
+        let daoCover = DAOCover()
         let myCover = daoCover.getData();
         if(myCover != nil){
             
-            println(myCover?.title)
+            print(myCover?.title)
             labelTitle.text = myCover?.title;
             labelName.text = myCover?.name;
             imageProfile.image = UIImage(contentsOfFile: myCover!.imageProfile)
@@ -41,7 +39,7 @@ class CoverVC: UIViewController {
 
             
         } else {
-            println("salvou nada")
+            print("salvou nada")
         }
         
         
@@ -55,28 +53,26 @@ class CoverVC: UIViewController {
         
         
     }
+
     
     //botao edit que leva pra RegisterCoverVC
     @IBAction func editCover(sender: AnyObject) {
-        
-     
-
-        var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
-        
+        let controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
         
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
    
     @IBAction func goToSummary(sender: AnyObject) {
-        
-        let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
     
-        ssVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+    
+    
+    let ssVC = ShowSummaryVC(nibName: "ShowSummaryVC", bundle: nil)
+    
+    //viewVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
     presentViewController(ssVC, animated: true, completion: nil)
     }
+
+
     
-
-    }
-
-
+}

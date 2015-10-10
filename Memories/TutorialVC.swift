@@ -17,7 +17,7 @@ class TutorialVC: UIViewController {
     }
     @IBAction func okButton(sender: AnyObject) {
         
-        var controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
+        let controller: RegisterCoverVC = RegisterCoverVC(nibName:"RegisterCoverVC", bundle:NSBundle.mainBundle())
         
         presentViewController(controller, animated: true, completion: nil)
     }

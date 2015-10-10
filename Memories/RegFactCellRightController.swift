@@ -19,7 +19,7 @@ class RegFactCellRightController: UITableViewCell {
     
     @IBAction func textFieldEditing(sender: UITextField) {
 
-    var datePickerView:UIDatePicker = UIDatePicker()
+    let datePickerView:UIDatePicker = UIDatePicker()
     datePickerView.datePickerMode = UIDatePickerMode.Date
     datePickerView.locale = NSLocale(localeIdentifier: "pt_BR")
     sender.inputView = datePickerView
@@ -28,7 +28,7 @@ class RegFactCellRightController: UITableViewCell {
 
 func datePickerValueChanged(sender:UIDatePicker) {
     
-    var dateFormatter = NSDateFormatter()
+    let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("ddMMyy", options: 0, locale: NSLocale(localeIdentifier: "pt_BR"))
     datePicker.text = dateFormatter.stringFromDate(sender.date)
 }
