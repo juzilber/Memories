@@ -156,7 +156,7 @@ class DAOFact {
                 
                 fact.audio = (foto["audio"] as! String)
                 
-                fact.date = foto["date"] as? NSDate
+                fact.date = (foto["date"] as! NSDate)
                 
                 fact.id = foto ["id"] as! Int
                 photos.append(fact)
@@ -170,9 +170,10 @@ class DAOFact {
         var daoAudio : DAOAudio = DAOAudio()
         
         //salvando o fact (foto+legenda+audio)
-        //        let photosStrings = saveDataImgToPath(imgs);
-        //        fact.photo = photosStrings;
-        let factDict = NSDictionary(objects: ["fact.photos", "fact.subtitle", "fact.audio", "fact.date"] , forKeys: ["photo","subtitle","audio", "date"])
+            let photosStrings = saveDataImgToPath(imgs);
+            fact.photos = photosStrings;
+        var audioString = (fact.audio == nil) ? "" : fact.audio;
+        let factDict = NSDictionary(objects: [fact.photos, fact.subtitle, audioString!, fact.date!] , forKeys: ["photo","subtitle","audio", "date"])
         
         var format = NSDateFormatter();
         //declarando ano mes e dia"yyyy-MM-dd"
@@ -222,12 +223,33 @@ class DAOFact {
         
     }
     
-    private func saveDataImgToPath(imgs : [UIImage], names : [String]){
+    private func saveDataImgToPath(imgs : [UIImage]) -> [String]{
         
-        for i in 0...names.count {
-            UIImagePNGRepresentation(imgs[i]).writeToFile(factPathDoc+"/"+names[i], atomically: true);
+        let fileManager = NSFileManager.defaultManager();
+        var names = [String]();
+        var nIndex = Int(0);
+        let existingImages = fileManager.contentsOfDirectoryAtPath(factPathDoc, error: nil) as! [String];
+        for img in imgs {
+            //enquanto o indice existe
+            var str = "\(nIndex).png"
+            while(exists(str, vec: existingImages)){
+                nIndex++;
+                str = "\(nIndex).png"
+            }
+            UIImagePNGRepresentation(img).writeToFile(factPathDoc+"/"+str, atomically: true);
+            names.append(str);
         }
         
+        return names;
+    }
+    
+    func exists(str : String, vec : [String]) -> Bool{
+        for v in vec{
+            if(str == v){
+                return true;
+            }
+        }
+        return false;
     }
     
 }

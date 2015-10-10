@@ -42,31 +42,25 @@ class DAOFamily{
         if(fileManager.fileExistsAtPath(familyPathDoc)){
             
             contents = NSMutableArray(contentsOfFile: familyPath);
-            
         }
             
         else
             
         {
-            
             fileManager.createDirectoryAtPath(familyPathDoc, withIntermediateDirectories: false, attributes: nil, error: nil)
             
             createDict()
-            
         }
-        
     }
     
     private func createDict(){
         
-        contents = NSMutableArray();
-        
+        contents = NSMutableArray(contentsOfFile: familyPath);
+        var dict = contents[0] as! NSMutableDictionary
+        dict["subtitle"] = "NAda que preste"
         contents.writeToFile(familyPath, atomically: true);
         
     }
-    
-    
-    
     //inicializa a classe
     
     func getDataArray() -> [Family] {
@@ -80,7 +74,6 @@ class DAOFamily{
             family.connection = (familyDict["connection"] as! String);
             family.audio = familyDict["audio"] as? String
             
-            
             if (!(familyDict["photo"] as! String).isEmpty) {
                 var pImg: String = familyPathDoc.stringByAppendingPathComponent(familyDict["photo"] as! String);
                 family.photo = pImg;
@@ -90,5 +83,26 @@ class DAOFamily{
         }
         return families
 }
+    func saveDataArray(families: [Family], photo: UIImage )
+    {
+         var save = NSMutableArray() //structure to save
+        var familyDict  = [String : String]()
+        
+        for family in families
+        {
+            familyDict["nome"] = family.subtitle;
+            familyDict["connection"] = family.connection;
+            save.addObject(familyDict)
+            
+//            if (!(photo as! String).isEmpty) {
+//                var pImg: String = familyPathDoc.stringByAppendingPathComponent(photo["photo"] as! String);
+//                family.photo = pImg;
+//            }
+        }
+        
+        save.writeToFile(familyPath, atomically: true)
+        
+        
+    }
 
 }

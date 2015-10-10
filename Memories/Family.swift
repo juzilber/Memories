@@ -10,7 +10,7 @@ import UIKit
 
 class Family : Moment {
 
-    var connection : String?
+    var connection : String!
     var photo : String!
     
 }

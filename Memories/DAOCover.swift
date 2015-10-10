@@ -26,7 +26,7 @@ class DAOCover {
     
     private var contents : NSMutableDictionary!;
     private let coverPath : String; //pasta Cover
-    private let coverPathDoc : String; //conteudo dentro da pasta Cover
+    private let coverPathDoc : String; //acesso ao arquivo da pasta Cover
     
     //inicializa a classe
     init(){
